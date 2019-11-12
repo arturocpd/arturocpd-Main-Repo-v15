@@ -405,6 +405,17 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>JCS_NUMBER__c</fullName>
+        <externalId>false</externalId>
+        <label>JCS_NUMBER</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Jigsaw</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
