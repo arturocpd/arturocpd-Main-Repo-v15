@@ -1,0 +1,91 @@
+<!--
+ - Created by ferhatozsavran on 6/19/18.
+ -->
+
+<apex:page id="UserStoryPageWaitingFor" standardController="copado__User_Story__c" extensions="copado.JobWaitingExtension" showHeader="true" applyHtmlTag="true" sidebar="false" applyBodyTag="false" docType="html-5.0" cache="false" lightningStylesheets="true">
+    <apex:slds />
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+
+    <head>
+        <c:IncludeStaticsResourceComponent addJquery="true" addUIjs="true" />
+
+        <style>
+            .apexp .bPageBlock.apexDefaultPageBlock .pbBody .pbSubheader {
+                display: -webkit-box;
+            }
+            .helpText {
+                z-index: 9999 !important;
+            }
+        </style>
+    </head>
+
+    <body class="slds-scope">
+    <apex:form >
+        <script type="text/javascript">
+            var wasJobStarted = (window.location.hash && window.location.hash.startsWith('#jobStarted'));
+            var isValidation;
+            var isPullRequest;
+
+            if(!wasJobStarted) {
+                var newUrl = new window.URL(window.location.href);
+                isValidation = newUrl.href.indexOf('validation')>=0;
+                isPullRequest = newUrl.href.indexOf('pullRequest')>=0;
+                isCommitChanges = newUrl.href.indexOf('commitChanges')>=0;
+                isTestRun = newUrl.href.indexOf('apexTestRun')>=0;
+                newUrl.hash = 'jobStarted';
+                window.history.replaceState('copado', document.title, newUrl);
+            }
+
+            $copado(document).ready(function() {
+                if(wasJobStarted)
+                    return; // we do not want to start a new job every time the user reloads the page
+                if(isValidation) {
+                    prepareValidationJob();
+                } else if(isPullRequest) {
+                    preparePullRequestJob();
+                } else if(isCommitChanges) {
+                    commitCallout();
+                } else if(isTestRun) {
+                    testClassesJob();
+                }
+            });
+        </script>
+
+        <apex:actionFunction name="preparePullRequestJob" action="{!preparationPullRequest}" />
+        <apex:actionFunction name="testClassesJob" action="{!apexTestRunCallOut}" reRender="theApexTestRunPoller" />
+        <apex:actionFunction name="commitCallout" action="{!commitCallOut}" onComplete="runCommitChanges();" reRender="msg,modalHeader"/>
+        <apex:actionFunction name="runCommitChanges" reRender="theCommitPoller" />
+        <apex:actionFunction name="prepareValidationJob" action="{!prepareValidation}" onComplete="runValidationJob();"/>
+        <apex:actionFunction name="runValidationJob" action="{!runValidation}" reRender="theDeploymentPoller" />
+        <apex:actionPoller action="{!waitForDeployment}" id="theDeploymentPoller" reRender="msg,theDeploymentPoller,modalHeader" interval="10" enabled="{!IsValidationPollerEnabled}" />
+        <apex:actionPoller action="{!waitForCommitChanges}" id="theCommitPoller" reRender="msg,theCommitPoller,modalHeader" interval="5" enabled="{!IsCommitChangesPollerEnabled}" />
+        <apex:actionPoller action="{!waitForApexTestRun}" id="theApexTestRunPoller" reRender="msg,theApexTestRunPoller,modalHeader" interval="5" enabled="{!IsApexTestRunPollerEnabled}" />
+
+        <section role="dialog" tabindex="-1" aria-labelledby="usValidateHeader" aria-modal="true" aria-describedby="usValidateContent" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <apex:outputPanel layout="block" id="modalHeader">
+                        <apex:outputPanel layout="none" rendered="{!pageSpinner}">
+                            <div role="status" class="slds-spinner slds-spinner_medium">
+                                <span class="slds-assistive-text">{!$Label.LOADING}</span>
+                                <div class="slds-spinner__dot-a"></div>
+                                <div class="slds-spinner__dot-b"></div>
+                            </div>
+                        </apex:outputPanel>
+                        <h2 id="usValidateHeader" class="slds-text-heading_medium slds-hyphenate" style="text-align: left;">
+                            <apex:outputField value="{!userStory.Name}" />
+                        </h2>
+                    </apex:outputPanel>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="usValidateContent">
+                    <apex:pageMessages id="msg" />
+                    <c:SObjectSummaryComponent userStory="{!userStory}" columnsHeader="1" />
+                    <apex:commandLink action="{!getReturnUrl}" value="{!$Label.copado__go_back}" />
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" id="usValidateBackdrop"></div>
+    </apex:form>
+    </body>
+    </html>
+</apex:page>
