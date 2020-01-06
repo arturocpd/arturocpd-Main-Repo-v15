@@ -4,9 +4,5 @@
         <members>Case.Field_Test_FP__c</members>
         <name>CustomField</name>
     </types>
-    <types>
-        <members>Admin CLONE 2</members>
-        <name>Profile</name>
-    </types>
     <version>46.0</version>
 </Package>
