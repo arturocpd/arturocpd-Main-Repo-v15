@@ -163,7 +163,7 @@
         <fullName>Automatic_Renewal_Clause__c</fullName>
         <externalId>false</externalId>
         <label>Automatic Renewal Clause</label>
-        <required>false</required>
+        <required>true</required>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
         <valueSet>
