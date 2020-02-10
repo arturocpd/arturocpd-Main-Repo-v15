@@ -4,9 +4,5 @@
         <members>Test_Connected_App</members>
         <name>ConnectedApp</name>
     </types>
-    <types>
-        <members>PS_Group</members>
-        <name>PermissionSetGroup</name>
-    </types>
     <version>47.0</version>
 </Package>
