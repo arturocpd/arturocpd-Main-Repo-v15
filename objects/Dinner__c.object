@@ -295,7 +295,6 @@
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
-    <gender>Feminine</gender>
     <label>Dinner</label>
     <listViews>
         <fullName>All</fullName>
