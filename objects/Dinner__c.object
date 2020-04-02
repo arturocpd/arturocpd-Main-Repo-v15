@@ -148,7 +148,7 @@
         <label>Cool Dinner</label>
     </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Change description 22222</description>
+    <description>description field 2</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -280,6 +280,14 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>VS_PS_Test_D__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>VS PS Test D</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>historyRetentionPolicy__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -287,7 +295,6 @@
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
-    <gender>Feminine</gender>
     <label>Dinner</label>
     <listViews>
         <fullName>All</fullName>
@@ -309,7 +316,6 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Dinners</pluralLabel>
-    <recordTypeTrackHistory>true</recordTypeTrackHistory>
     <recordTypes>
         <fullName>Dinner_RT</fullName>
         <active>true</active>
@@ -424,7 +430,7 @@
             </values>
         </picklistValues>
     </recordTypes>
-    <searchLayouts/>
+    <searchLayouts />
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
