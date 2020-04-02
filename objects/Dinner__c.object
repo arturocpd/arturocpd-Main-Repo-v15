@@ -316,7 +316,6 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Dinners</pluralLabel>
-    <recordTypeTrackHistory>true</recordTypeTrackHistory>
     <recordTypes>
         <fullName>Dinner_RT</fullName>
         <active>true</active>
