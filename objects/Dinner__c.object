@@ -280,6 +280,43 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>VS_Field1_Test_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>VS Field1 Test 2</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>VS_Field2_Test_2__c</fullName>
+        <externalId>false</externalId>
+        <label>VS Field2 Test 2</label>
+        <length>13</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VS_Field3_Test_2__c</fullName>
+        <externalId>false</externalId>
+        <label>VS Field3 Test 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VS_Field4_Test_2__c</fullName>
+        <externalId>false</externalId>
+        <label>VS Field4 Test 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
         <fullName>historyRetentionPolicy__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -424,7 +461,7 @@
             </values>
         </picklistValues>
     </recordTypes>
-    <searchLayouts/>
+    <searchLayouts />
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
