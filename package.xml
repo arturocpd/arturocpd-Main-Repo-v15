@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Case.VS_PS_Test__c</members>
-        <members>Dinner__c.VS_PS_Test_D__c</members>
+        <members>Dinner__c.VS_Field1_Test_2__c</members>
+        <members>Dinner__c.VS_Field2_Test_2__c</members>
+        <members>Dinner__c.VS_Field3_Test_2__c</members>
+        <members>Dinner__c.VS_Field4_Test_2__c</members>
         <name>CustomField</name>
-    </types>
-    <types>
-        <members>Dinner__c</members>
-        <name>CustomObject</name>
     </types>
     <version>48.0</version>
 </Package>
