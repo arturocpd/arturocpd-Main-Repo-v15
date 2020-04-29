@@ -252,6 +252,7 @@
     </fields>
     <fields>
         <fullName>CCH_Test__c</fullName>
+        <description>Arturo</description>
         <encryptionScheme>ProbabilisticEncryption</encryptionScheme>
         <externalId>false</externalId>
         <label>CCH Test</label>
