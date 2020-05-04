@@ -1,7 +1,7 @@
 /*@Author: RWA
 *@Description: Récupération des valeurs du WS prix et remise et calcul des mens
 *@CreatedDate:
-*@LastModified: RJM 17/04/2020
+*@LastModified: MHA 22/02/2019
 */
 global class SM_AP11_OffresEtPrix implements vlocity_cmt.VlocityOpenInterface {
     /*@Author: RWA
@@ -22,18 +22,21 @@ global class SM_AP11_OffresEtPrix implements vlocity_cmt.VlocityOpenInterface {
         }
         return true;
     }
+    
     /*@Author: RWA
 *@Description: Récupération des valeurs du WS prix et remise et calcul des mens
 *@CreatedDate:
-*@LastModified: RJM 17/04/2020
+*@LastModified: MHA 05/03/2019
 */
     public static void getOffresEtPrix(Map < String, Object > inputMap, Map < String, Object > outMap) {
         /* recuperer le type denergie*/
         //  Map < String, Object > inputMapCE = (Map < String, Object >) inputMap.get('ChoixElements');
         String vEnergyTypeOptions = (String) inputMap.get('EnergyTypeOptions');
+        
         /* recuperer la date d'effet souhaitee */
         String vDateEffet = (String) inputMap.get('EffectiveDate');
         outMap.put('debug', '123'+vDateEffet);
+
         // String vdate= '2018-09-24T22:00:00.000Z';
         Date d = Date.ValueOf(vDateEffet.substring(0, 10));
         /*BUG DANS L'OS MEME SI LA DATE DEFFET AFFICHE j+1 DANS LE JSON LA VALEUR EST TOUJOURS A j
@@ -41,14 +44,18 @@ BUG REMONTE A JAMILA*/
         d = d.addDays(1);
         Datetime vDateEffetSouhaitee = Datetime.newInstanceGmt(d.year(), d.month(), d.day());
         /*system.debug('@@ now ' +system.now());
+
 Datetime vDateEffetSouhaitee=Datetime.valueOf(vDateEffet);
 //Datetime.valueOf('2018-07-03 00:00:00');
 */
         //system.debug('@@ vDateEffetSouhaitee now '+system.now());
+        
         /* recuperer le  code postal et le code insee*/
+        
         //Map < String, Object > inputMapCE1 = (Map < String, Object >) inputMap.get('ChoixElements1');
         String vCodeInsee = String.valueOf(inputMap.get('citycodeValue') );
         String vCodePostal = String.valueOf(inputMap.get('postcodeValue'));
+                
         //Récupération de la CAR et la CAE
         Double CAR = 0;
         Double CAE = 0;
@@ -58,18 +65,23 @@ Datetime vDateEffetSouhaitee=Datetime.valueOf(vDateEffet);
         if (inputMap.get('CAR') != null && inputMap.get('CAR') != '') {
             CAR = Double.valueOf(inputMap.get('CAR'));
         }
+        
         if (inputMap.get('CAE') != null && inputMap.get('CAE') != '') {
             CAE = Double.valueOf(inputMap.get('CAE'));
         }
+        
         if (inputMap.get('CAE_HC') != null && inputMap.get('CAE_HC') != '') {
             CAE_HC = Double.valueOf(inputMap.get('CAE_HC'));
         }
+        
         if (inputMap.get('CAE_HP') != null && inputMap.get('CAE_HP') != '') {
             CAE_HP = Double.valueOf(inputMap.get('CAE_HP'));
         }
+        
         if (inputMap.get('CAE_WE') != null && inputMap.get('CAE_WE') != '') {
             CAE_WE = Double.valueOf(inputMap.get('CAE_WE'));
         }
+        
         /*Recuperer les caracteristiques Gaz ou Elec*/
         String vPuissance = '';
         String vTypeComptage = '';
@@ -77,19 +89,23 @@ Datetime vDateEffetSouhaitee=Datetime.valueOf(vDateEffet);
         if (vEnergyTypeOptions != 'Elec') {
             vCodePlageConso = String.valueOf(inputMap.get('codePlageConso'));
         }
+        
         if (vEnergyTypeOptions != 'Gaz') {
             vPuissance = String.valueOf(inputMap.get('puissance'));
             //vTypeComptage = String.valueOf(inputMap.get('codeTypeComptage'));
         }
+        
         String niveauOuvertureService;
         String codeFTA;
         String lastModifFTA;
         String typedecompteur;
+        
         // system.debug('## inputMap.get pdlElecInfo '+inputMap.get('pdlElecInfo'));
         //  if(inputMap.get('pdlElecInfo') != null){
         //  map<String,Object> mapPdlInfos = (map<String,Object>)inputMap.get('pdlElecInfo');
         if(!String.isBlank(String.valueOf(inputMap.get('niveauOuvertureServices')))){
             niveauOuvertureService = String.valueOf(inputMap.get('niveauOuvertureServices'));
+            
             if(niveauOuvertureService.contains('0')){
                 niveauOuvertureService = '0';
             }
@@ -100,24 +116,31 @@ Datetime vDateEffetSouhaitee=Datetime.valueOf(vDateEffet);
                 niveauOuvertureService = '2';
             }
         }
+        
         if(inputMap.get('dateDerniereModificationFormuleTarifaireAcheminement') != null){
             lastModifFTA = (String) inputMap.get('dateDerniereModificationFormuleTarifaireAcheminement');
             //    lastModifFTA =  Datetime.ValueofGmt(dateTimeString.replace('T',' '));
         }
+                
         if(inputMap.get('ftaCode') != null && inputMap.get('ftaCode') != 0){
             codeFTA = (String) inputMap.get('ftaCode');
         }
+        
         if(inputMap.get('typeComptageDifferencie') != null){
             vTypeComptage = (String) inputMap.get('typeComptageDifferencie');
         }
+        
         if(inputMap.get('typeCompteur') != null){
             typedecompteur = (String) inputMap.get('typeCompteur');
         }
+        
         //  }
+
         String sellingOption;
         // system.debug('## inputMap.get choixelement '+inputMap.get('ChoixElements'));
         //  if(inputMap.get('ChoixElements') != null ){
         // map<String,Object> stepChoixElmts = (map<String,Object>)inputMap.get('ChoixElements');
+        
         // RJM 03/02/2020 
         //Ajout de la sellingOption Changement d'offre 
         if(inputMap.get('chooseSellingOption') != null){
@@ -132,66 +155,46 @@ Datetime vDateEffetSouhaitee=Datetime.valueOf(vDateEffet);
             }
         }
         // }
-		     /* US FT1-3663 --> recupérer les parametres Harmonica: L'ID du pack, le conext de moveIn, le code offre gaz et le code offre Elec */
-        String contextMoveIn = (String) inputMap.get('moveinContext') != null ?  (String) inputMap.get('moveinContext') : '';
-        String packCode = (String) inputMap.get('packCode') != null ?  (String) inputMap.get('packCode') : '';
-        String codeOffreGaz = (String) inputMap.get('codeOffreGaz') != null ?  (String) inputMap.get('codeOffreGaz') : ''; 
-        String codeOffreElec = (String) inputMap.get('codeOffreElec') != null ?  (String) inputMap.get('codeOffreElec') : '';
+        
         list<SM_TranscoTypeComptageStrucMesFour__mdt> listTrascoTypeCompt = [select StructureMesureFournisseur__c from SM_TranscoTypeComptageStrucMesFour__mdt where TypeComptage__c =:vTypeComptage];
         list<String> listStrucMesFour = new list<String>();
         for(SM_TranscoTypeComptageStrucMesFour__mdt transco : listTrascoTypeCompt){
             listStrucMesFour.add(transco.StructureMesureFournisseur__c);
         }
+
         List<Product2> offres;
 		List<String> listOffres = new List<String>();
         if(listStrucMesFour.size() > 0){// Dual ou Elec
-		           // Si on est dans un context harmonica, récupère le produit harmonica en se basant son code pack 
-            if(contextMoveIn == 'harmonica' && !String.isBlank(packCode)){
-                offres = [SELECT id, TypeOffre__c,FamilyLabel__c,SM_structureMesureFournisseur__c, Family, ProductCode, vlocity_cmt__SpecificationType__c, ArticleURL__c, ArticlePreview__c,Ordre_daffichage__c
-                          FROM Product2
-                          WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND (SM_structureMesureFournisseur__c = :listStrucMesFour OR Family =: packCode)
-                          ORDER BY Ordre_daffichage__c asc];
-            }else {
-                offres = [SELECT id, TypeOffre__c,FamilyLabel__c,SM_structureMesureFournisseur__c, Family, ProductCode, vlocity_cmt__SpecificationType__c, ArticleURL__c, ArticlePreview__c,Ordre_daffichage__c
-                          FROM Product2
-                          WHERE  (vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND SM_structureMesureFournisseur__c = :listStrucMesFour)
-                          ORDER BY Ordre_daffichage__c asc];
-            }
+            
+            offres = [SELECT id, TypeOffre__c,FamilyLabel__c,SM_structureMesureFournisseur__c, Family, ProductCode, vlocity_cmt__SpecificationType__c, ArticleURL__c, ArticlePreview__c
+                      FROM Product2
+                      WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND SM_structureMesureFournisseur__c = :listStrucMesFour];
+
             if(vEnergyTypeOptions == 'Duo' && offres.size()>0){
                 List<String> listProductFamily = new List<String>();
                 for(Product2 offre : offres){
                     listProductFamily.add(offre.Family);
                 }
                 if(listProductFamily.size()>0){
-                     if(contextMoveIn == 'harmonica' && !String.isBlank(packCode)){
                     offres = [SELECT id,TypeOffre__c, FamilyLabel__c,SM_structureMesureFournisseur__c, Family, ProductCode, vlocity_cmt__SpecificationType__c, ArticleURL__c, ArticlePreview__c
                               FROM Product2
                               WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions
                               AND IsActive = true 
                               AND Family IN :listProductFamily
-                                  AND ((SM_structureMesureFournisseur__c IN:listStrucMesFour OR SM_structureMesureFournisseur__c = null) OR Family =: packCode)
-                                  ];
-                    }else{
-                        offres = [SELECT id,TypeOffre__c, FamilyLabel__c,SM_structureMesureFournisseur__c, Family, ProductCode, vlocity_cmt__SpecificationType__c, ArticleURL__c, ArticlePreview__c
-                              FROM Product2
-                              WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions
-                              AND IsActive = true 
-                              AND Family IN :listProductFamily
-                                  AND (SM_structureMesureFournisseur__c IN:listStrucMesFour OR SM_structureMesureFournisseur__c = null)
-                                  ];
-                    }
+                              AND (SM_structureMesureFournisseur__c = :listStrucMesFour OR SM_structureMesureFournisseur__c = null)];
                 }
-                System.debug('### aka offres 2 ' + offres);
+                
                 /* offres = [SELECT id, FamilyLabel__c,SM_structureMesureFournisseur__c, Family, ProductCode, vlocity_cmt__SpecificationType__c
 FROM Product2
 WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND (SM_structureMesureFournisseur__c = :listStrucMesFour OR SM_structureMesureFournisseur__c = null)];*/
             }
+            
         }else{// Gaz il n'y a pas de structure mesure fournisseur
             offres = [SELECT id,TypeOffre__c, FamilyLabel__c,SM_structureMesureFournisseur__c, Family, ProductCode, vlocity_cmt__SpecificationType__c, ArticleURL__c, ArticlePreview__c
                       FROM Product2
                       WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true];
-             System.debug('### aka offres 3 ' + offres);
         }
+        
         List<String> listOffresIds = new List<String>();
         Date todayDate = date.today();
         if (offres.size() > 0) {
@@ -205,6 +208,8 @@ WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND (SM_s
                                                     FROM Choix_Offre__c
                                                     WHERE Energie__c = :vEnergyTypeOptions
                                                     AND Actif__c = true];
+
+                                                         
 			if(listChoixOffres.size()>0){
 				for(Choix_Offre__c choixOffre : listChoixOffres){
 					if(typedecompteur == 'LINKY'){	
@@ -214,14 +219,17 @@ WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND (SM_s
 						setProductPoussesIds.add(choixOffre.ChoixOffrePoussee__r.ProductCode);
 					}
 					setProductReplisIds.add(choixOffre.ChoixOffrerepli__r.ProductCode);
+					
 				}
 			}
+
             Map<String, List<String>> mapPackOffres = new Map<String, List<String>>();
             Map<String, String> mapCodeOffresLibPack = new Map<String, String>();
             Map<String, Boolean> mapIsOffrePoussee = new Map<String, Boolean>();
 			Map<String, Boolean> mapIsOffreRepli = new Map<String, Boolean>();
             Map<String, String> mapProdFamStrucMesFourn = new Map<String,String>();
             Map<String, Article> mapArticle = new Map<String,Article>();
+            
             for (Product2 offre : offres) {
                 //if (checkEligibility(Offre.ProductCode,offre.Family,niveauOuvertureService,typedecompteur)) {
                     // Construct a MAP that holds <CodeProduit, TypeOffre> to be used later to process TradeOff offres. 
@@ -231,6 +239,7 @@ WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND (SM_s
                     } else {
                         mapPackOffres.put(offre.Family, new List<String> {Offre.ProductCode});
                     }
+                    
                     mapCodeOffresLibPack.put(offre.Family, offre.FamilyLabel__c);
                   /*  if (offre.vlocity_cmt__SpecificationType__c == 'Offre poussée' ) {
                         mapIsOffrePoussee.put(offre.ProductCode, true);
@@ -256,26 +265,67 @@ WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND (SM_s
                     article.url = offre.ArticleURL__c;
                     article.preview = offre.ArticlePreview__c;
                     mapArticle.put(offre.ProductCode, article);
+                    
+                    
                // }
             }
+            
             List<String> listCodesOffres = new List<String>();
             listCodesOffres.addAll(mapCodeOffresLibPack.keySet());
             Map<String, Object> mapOffresEtPrix = new Map<String, Object>();
             mapOffresEtPrix.put('test',mapPackOffres);
+            /* US FT1-3663 --> recupérer les parametres Harmonica: L'ID du pack, le conext de moveIn, le code offre gaz et le code offre Elec */
+            String contextMoveIn = (String) inputMap.get('moveinContext') != null ?  (String) inputMap.get('moveinContext') : '';
+            String packCode = (String) inputMap.get('packCode') != null ?  (String) inputMap.get('packCode') : '';
+            String codeOffreGaz = (String) inputMap.get('codeOffreGaz') != null ?  (String) inputMap.get('codeOffreGaz') : ''; 
+            String codeOffreElec = (String) inputMap.get('codeOffreElec') != null ?  (String) inputMap.get('codeOffreElec') : '';
+
             List<PrixOffreConsolide> OffresEtPrix = getPrix(codeFTA,lastModifFTA,sellingOption, vCodeInsee, vCodePostal, mapPackOffres, mapCodeOffresLibPack, mapIsOffrePoussee,mapProdFamStrucMesFourn, vDateEffetSouhaitee, vCodePlageConso, vPuissance, vTypeComptage,niveauOuvertureService,CAR, CAE, CAE_HP, CAE_HC, CAE_WE, mapArticle, mapIsOffreRepli,contextMoveIn,packCode,codeOffreGaz,codeOffreElec);
+            //  List<PrixOffreConsolide> OffresEtPrix = new List<PrixOffreConsolide>();            
             mapOffresEtPrix.put('OffreCatalogue', OffresEtPrix);
-            system.debug('@@@ OffreChoisie ' + OffreChoisie);
+            
+
+
+            /* si on est dans le contexte harmonica, pré-selectionner l'offre en se basant sur l'Id pack */
+         /*   if(!String.isBlank(contextMoveIn) && contextMoveIn == 'harmonica'){
+              PrixOffreConsolide  OffreChoisie = retrieveSelectedOffer(OffresEtPrix,packCode);
+              system.debug(' --> OffreChoisie = '+OffreChoisie);  
+                if(OffreChoisie != null){
+            		      
+                }
+            } */
              mapOffresEtPrix.put('OffreChoisis', OffreChoisie); 
             outMap.putAll(mapOffresEtPrix);
         }
     }
+    
     /*@Author: RWA
 *@Description: Récupération des valeurs du WS prix et remise et calcul des mens
 *@CreatedDate:
 *@LastModified: MHA 05/03/2019
 */
     public static List<PrixOffreConsolide> getPrix(String codeFTA,String lastModifFTA,String contSouscriptionCode,String codeCommune, String codePostal, Map<String, List<String>> mapPackOffres, Map<String, String> mapCodeOffresLibPack, Map<String, Boolean> mapIsOffrePoussee,Map<String,String> mapStrucmesfour,Datetime dateEffet, String plageconso, String vpuissance, String typeDeComptage,String niveauOuvertureService,Double CAR, Double CAE, Double CAE_HP, Double CAE_HC, Double CAE_WE, Map<String, Article> mapArticle, Map<String, Boolean> mapisOffreRepli,String contextMoveIn,String packCode,String codeOffreGaz,String codeOffreElec) {
+        
         SM_OCTOPUS__c octopusCS = SM_OCTOPUS__c.getOrgDefaults();
+        
+        // US FT1-3663 --> Harmonica, enréchir la map mapPackOffres en rajoutant les codes des offers harminca s'il n y sont pas déja
+        //system.debug('contextMoveIn = '+contextMoveIn);
+        //system.debug('mapPackOffres = '+mapPackOffres.keyset().contains(packCode));
+        if(contextMoveIn == 'harmonica' && !mapPackOffres.keyset().contains(packCode)){
+            Article article = new Article();
+            String[] offresCodes = new String[]{};
+            if(!String.isBlank(codeOffreGaz)){
+               offresCodes.add(codeOffreGaz); 
+                mapArticle.put(codeOffreGaz,article);
+            }
+            if(!String.isBlank(codeOffreElec)){
+               offresCodes.add(codeOffreElec);
+               mapArticle.put(codeOffreElec,article);
+            }
+            mapPackOffres.put(packCode,offresCodes);
+                    system.debug('mapPackOffres = '+mapPackOffres.keyset().contains(packCode));
+
+        }
         List<gdfsuezBefCalypsoPrixetremisesv2.rechercherPrixEtRemisesInputDt> listInput = new List<gdfsuezBefCalypsoPrixetremisesv2.rechercherPrixEtRemisesInputDt>();
         gdfsuezComBefChpCommunV3.contextDt octx = initContext(octopusCS.appName__c, '1.00');
         for (String pack : mapPackOffres.keyset()) {
@@ -299,9 +349,11 @@ WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND (SM_s
             gdfsuezComBefChpCommunV3.listeValeursDt codeEnseigneSouscription = new gdfsuezComBefChpCommunV3.listeValeursDt();
             codeEnseigneSouscription.code = 'PPO';
             prixService.enseigneSouscription = codeEnseigneSouscription;
+            
             gdfsuezComBefChpCommunV3.listeValeursDt contexteSouscription = new gdfsuezComBefChpCommunV3.listeValeursDt();
             contexteSouscription.code = contSouscriptionCode;
             prixService.contexteSouscription = contexteSouscription;
+            
             /*Constution des caractistiques GAZ*/
             system.debug('--- plageconso = '+String.isBlank(plageconso));
             if (!String.isBlank(plageconso)) {
@@ -310,6 +362,9 @@ WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND (SM_s
                 plageConsommation.code = plageconso;
                 carGaz.plageConsommation = plageConsommation;
                 prixService.caracteristiquesOffreGaz = carGaz;
+                if(pack == 'DGBUEBUVR1_P'){
+                    system.debug('--- prixService.caracteristiquesOffreGaz = '+prixService.caracteristiquesOffreGaz);
+                }
             }
             system.debug('--- vpuissance = '+String.isBlank(vpuissance));
             /*Constution des caractistiques ELEC*/
@@ -320,6 +375,7 @@ WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND (SM_s
                     formuleTarifaireAcheminement.code = codeFTA;
                     prixService.formuleTarifaireAcheminement = formuleTarifaireAcheminement; 
                 }
+                
                 gdfsuezBefCalypsoPrixetremisesv2.caracteristiquesOffreElecDt carElec = new gdfsuezBefCalypsoPrixetremisesv2.caracteristiquesOffreElecDt();
                 if (!String.isBlank(vpuissance) ) {
                     gdfsuezComBefChpCommunV3.listeValeursDt puissanceV = new gdfsuezComBefChpCommunV3.listeValeursDt();
@@ -334,7 +390,9 @@ WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND (SM_s
 gdfsuezComBefChpCommunV3.listeValeursDt typeComptageV = new gdfsuezComBefChpCommunV3.listeValeursDt();
 typeComptageV.code = typeDeComptage;
 carElec.typeComptage = typeComptageV;
+
 system.debug('typeComptageV' + typeComptageV);
+
 }*/
                 if(mapStrucmesfour.get(pack) != null){
                     gdfsuezComBefChpCommunV3.listeValeursDt structureMesureFournisseur = new gdfsuezComBefChpCommunV3.listeValeursDt();
@@ -349,6 +407,7 @@ system.debug('typeComptageV' + typeComptageV);
                 }
                 prixService.caracteristiquesOffreElec = carElec;
             }
+            
             listInput.add(prixService);
         }
         gdfsuezBefCalypsoPrixetremisesv2.PrixEtRemisesPort prixRemiseService = new gdfsuezBefCalypsoPrixetremisesv2.PrixEtRemisesPort();
@@ -358,7 +417,10 @@ system.debug('typeComptageV' + typeComptageV);
         prixRemiseService.endpoint_x = octopusCS.endpoint__c + 'ES-PrixEtRemises_v2';
         system.debug('endpoint ' +  prixRemiseService.endpoint_x);
         prixRemiseService.inputHttpHeaders_x = new Map<String, String> {'Content-Type' => 'text/xml;charset=utf-8'};
+            
             gdfsuezBefCalypsoPrixetremisesv2.rechercherPrixEtRemisesResponse_element response = new gdfsuezBefCalypsoPrixetremisesv2.rechercherPrixEtRemisesResponse_element();
+        system.debug('@@ response ' + JSON.serialize(response));
+        System.debug('### listInput '+ JSON.serialize(listInput));
         if (!Test.isRunningTest()) {
             response = prixRemiseService.RechercherPrixEtRemises(listInput, octx);
         } else {
@@ -368,8 +430,10 @@ system.debug('typeComptageV' + typeComptageV);
             response = testObject.RechercherPrixEtRemises(listInput, octx);
             system.debug('@@ end of mock' + response);
         }
+        
         List<PrixOffreConsolide> listOffreAvecPrix = new  List<PrixOffreConsolide>();
         Map<String, PrixOffreConsolide> mapLibelleParPix = new Map<String, PrixOffreConsolide>();
+        
         if (response != null && response.messageRetours != null && response.messageRetours.messageRetour != null ) {
             for (gdfsuezComBefChpCommunV3.messageRetour_element msgRetour : response.messageRetours.messageRetour) {
                 if ('ERREUR'.equalsIgnoreCase(msgRetour.type_x)) {
@@ -377,7 +441,9 @@ system.debug('typeComptageV' + typeComptageV);
                 }
             }
         }
+        
         gdfsuezBefCalypsoPrixetremisesv2.rechercherPrixEtRemisesOutputDt[] rechercherPrixEtRemisesOutput = response.rechercherPrixEtRemisesOutput;
+        system.debug('@@ rechercherPrixEtRemisesOutput ' + JSON.serialize(rechercherPrixEtRemisesOutput));
         for (gdfsuezBefCalypsoPrixetremisesv2.rechercherPrixEtRemisesOutputDt donneesRetour : rechercherPrixEtRemisesOutput) {
             String packId;
             String packLibelle;
@@ -388,12 +454,16 @@ system.debug('typeComptageV' + typeComptageV);
             }
             if (donneesRetour != null && donneesRetour.donneesOffre != null) {
                 gdfsuezBefCalypsoPrixetremisesv2.donneesOffreDt[] donneesOffre = donneesRetour.donneesOffre;
+            
                 for (gdfsuezBefCalypsoPrixetremisesv2.donneesOffreDt data : donneesOffre) {
                     String ftaOutput;
                     if(data.formuleTarifaireAcheminement != null){
                           ftaOutput =  data.formuleTarifaireAcheminement.code;
                     }
+                   
                     gdfsuezBefCalypsoPrixetremisesv2.listePrixDt listePrix = data.listePrix;
+
+                    
                     if (listePrix != null) {
                         /*String jsonOut = JSON.serialize(listePrix);
 system.debug('@@ json ' + jsonOut);*/
@@ -405,7 +475,14 @@ system.debug('@@ json ' + jsonOut);*/
                         Map<String, Map<String, Double>> mapConsoGazByTypeComptage = new Map<String, Map<String, Double>>();
                         wrapperPrix prixElec = new wrapperPrix('Elec', Double.valueOf('0'), Double.valueOf('0'), mapConsoByTypeComptage);
                         wrapperPrix prixGaz = new wrapperPrix('Gaz', Double.valueOf('0'), Double.valueOf('0'), mapConsoGazByTypeComptage);
+                        
                         for (gdfsuezBefCalypsoPrixetremisesv2.prixDt prix : listePrix.prix) {
+ 
+                            System.debug('### aka prix.caracteristiquesGaz ' + prix.caracteristiquesGaz);
+                           /*   System.debug('### aka prix.caracteristiquesGaz.plageconsommation ' + prix.caracteristiquesGaz.plageconsommation);
+                            System.debug('### aka prix.caracteristiquesGaz.typePrix.code ' + prix.caracteristiquesGaz.typePrix.code);
+                             System.debug('### aka typeOfProduct.get(data.idOffre) ' + typeOfProduct.get(data.idOffre));*/
+                            /*Si l'offre contioent des caracteristique GAZ je recupere les prix de l'ABO et de la CONS*/
                             if (prix.caracteristiquesGaz != null && prix.caracteristiquesGaz.typePrix!= null
                                 && prix.caracteristiquesGaz.plageconsommation != null
                                 && typeOfProduct.get(data.idOffre) != 'TradeOFF'
@@ -415,7 +492,9 @@ system.debug('@@ json ' + jsonOut);*/
                                     if (prix.caracteristiquesGaz.typePrix.code == 'AB') {
                                         prixGaz.AboTTC = montantTTC;
                                         prixGaz.AboHT = montantHT;
+                                        
                                     }
+                                    
                                     if (prix.caracteristiquesGaz.typePrix.code == 'CO') {
                                         // consoGaz=String.valueOf(Decimal.valueOf(montantTTC).setscale(2))+ ' €/kWh TTC ('+String.valueOf(Decimal.valueOf(montantHT).setscale(5))+' HT)';
                                         Map<String, Double> montants = new Map<String, Double>();
@@ -441,37 +520,48 @@ system.debug('@@ json ' + jsonOut);*/
                                             mapConsoGazByTypeComptage.put('consoGaz', montants);
                                        }
                                        if(prix.caracteristiquesGaz.typePrix.code == 'ACHAB'){
+
                                             Map<String, Double> montants = new Map<String, Double>();
                                             montants.put('TTC', prix.montantTTC);
                                             montants.put('HT', prix.montantHT);
                                             mapConsoGazByTypeComptage.put('ACHAB', montants);
+
                                         }
                                         if(prix.caracteristiquesGaz.typePrix.code == 'AB'){
+
                                             Map<String, Double> montants = new Map<String, Double>();
                                             montants.put('TTC', prix.montantTTC);
                                             montants.put('HT', prix.montantHT);
                                             mapConsoGazByTypeComptage.put('AB', montants);
+                                            
                                         }
                                         if(prix.caracteristiquesGaz.typePrix.code == 'ACHCO'){
+
                                             Map<String, Double> montants = new Map<String, Double>();
                                             montants.put('TTC', prix.montantTTC);
                                             montants.put('HT', prix.montantHT);
                                             mapConsoGazByTypeComptage.put('ACHCO', montants);
+                                            
                                         }
                                         if(prix.caracteristiquesGaz.typePrix.code == 'CO'){
+
                                             Map<String, Double> montants = new Map<String, Double>();
                                             montants.put('TTC', prix.montantTTC);
                                             montants.put('HT', prix.montantHT);
                                             mapConsoGazByTypeComptage.put('CO', montants);
+                                            
                                         }
                                         if(prix.caracteristiquesGaz.typePrix.code == 'OB'){
+
                                             Map<String, Double> montants = new Map<String, Double>();
                                             montants.put('TTC', prix.montantTTC);
                                             montants.put('HT', prix.montantHT);
                                             mapConsoGazByTypeComptage.put('OB', montants);
+                                            
                                         }
                                         prixGaz.mapConsoByType = mapConsoGazByTypeComptage;
                                 }
+                            
                             /*Si l'offre contient des caracteristique ELEC je recupere les prix de l'ABO et de la CONS*/
                             if (prix.caracteristiquesElec != null && prix.caracteristiquesElec.typePrix != null
                                 && prix.caracteristiquesElec.puissance != null && prix.caracteristiquesElec.typeComptage != null
@@ -484,6 +574,7 @@ system.debug('@@ json ' + jsonOut);*/
                                         prixElec.AboTTC = montantTTC;
                                         prixElec.AboHT = montantHT;
                                     }
+                                    
                                     if (prix.caracteristiquesElec.typePrix.code == 'CO'
                                         && prix.caracteristiquesElec.typeComptage != null
                                         && !mapConsoByTypeComptage.keyset().contains(prix.caracteristiquesElec.typeComptage.libelleCourt)) {
@@ -494,20 +585,28 @@ system.debug('@@ json ' + jsonOut);*/
                                             // consoElec=String.valueOf(Decimal.valueOf(montantTTC).setscale(2))+ ' €/kWh TTC ('+String.valueOf(Decimal.valueOf(montantHT).setscale(5))+' HT)';
                                             prixElec.mapConsoByType = mapConsoByTypeComptage;
                                         }
+                                    
                                 }else if(prix.caracteristiquesElec != null && prix.caracteristiquesElec.typePrix != null 
                                 && prix.caracteristiquesElec.puissance != null  
                                 && typeOfProduct.get(data.idOffre) == 'TradeOFF' 
                                 ){
+
                                       if (prix.caracteristiquesElec.typePrix.code == 'CO'
                                             && prix.caracteristiquesElec.typeComptage != null
                                         ) {
                                             Map<String, Double> montants = new Map<String, Double>();
                                             montants.put('TTC', prix.montantTTC);
                                             montants.put('HT', prix.montantHT);
+                                           
                                             mapConsoByTypeComptage.put('CO'+prix.caracteristiquesElec.typeComptage.code, montants);
+                                            
+                                            
                                             // consoElec=String.valueOf(Decimal.valueOf(montantTTC).setscale(2))+ ' €/kWh TTC ('+String.valueOf(Decimal.valueOf(montantHT).setscale(5))+' HT)';
                                             prixElec.mapConsoByType = mapConsoByTypeComptage;
                                         }
+
+
+
                                        if(prix.caracteristiquesElec.typePrix.code == 'TOTAB'){
                                             prixElec.AboTTC = prix.montantTTC;
                                             prixElec.AboHT = prix.montantHT;
@@ -515,30 +614,39 @@ system.debug('@@ json ' + jsonOut);*/
                                        if(prix.caracteristiquesElec.typePrix.code == 'TOTCO'){
                                             prixElec.CoTTC = prix.montantTTC;
                                             prixElec.CoHT = prix.montantHT;
+
                                        }
                                        if(prix.caracteristiquesElec.typePrix.code == 'ACHAB'){
+
                                             Map<String, Double> montants = new Map<String, Double>();
                                             montants.put('TTC', prix.montantTTC);
                                             montants.put('HT', prix.montantHT);
                                             mapConsoByTypeComptage.put('ACHAB', montants);
+
                                             /*prixElec.AboAcheminementTTC = prix.montantTTC;
                                             prixElec.AboAcheminementHT = prix.montantHT;
                                             system.debug('---> PrixElec AboAcheminementTTC = '+prixElec.AboTTC+', AboAcheminementHT = '+prixElec.AboHT);*/
                                         }
                                        if(prix.caracteristiquesElec.typePrix.code == 'AB'){
+
+
                                             Map<String, Double> montants = new Map<String, Double>();
                                             montants.put('TTC', prix.montantTTC);
                                             montants.put('HT', prix.montantHT);
                                             mapConsoByTypeComptage.put('AB', montants);
+                                            
                                             /*prixElec.AboFournitureTTC = prix.montantTTC;
                                             prixElec.AboFournitureHT = prix.montantHT;
                                             system.debug('---> PrixElec AboFournitureTTC = '+prixElec.AboTTC+', AboFournitureHT = '+prixElec.AboHT);*/
                                         }
                                         if(prix.caracteristiquesElec.typePrix.code == 'OB'){
+
+
                                             Map<String, Double> montants = new Map<String, Double>();
                                             montants.put('TTC', prix.montantTTC);
                                             montants.put('HT', prix.montantHT);
                                             mapConsoByTypeComptage.put('OB', montants);
+                                            
                                             /*prixElec.AboFournitureTTC = prix.montantTTC;
                                             prixElec.AboFournitureHT = prix.montantHT;
                                             system.debug('---> PrixElec AboFournitureTTC = '+prixElec.AboTTC+', AboFournitureHT = '+prixElec.AboHT);*/
@@ -551,10 +659,13 @@ system.debug('@@ json ' + jsonOut);*/
                                             montants.put('HT', prix.montantHT);
                                             mapConsoByTypeComptage.put(prix.caracteristiquesElec.typeComptage.code, montants);
                                             // consoElec=String.valueOf(Decimal.valueOf(montantTTC).setscale(2))+ ' €/kWh TTC ('+String.valueOf(Decimal.valueOf(montantHT).setscale(5))+' HT)';
-                                }
+                                        }
                                         prixElec.mapConsoByType = mapConsoByTypeComptage;
+                                        
+                                }
+                               
                         }
-                        }
+                        
                         if (mapLibelleParPix.get(libellePackDeLOffre) == null) {
                             PrixOffreConsolide offreValue = new PrixOffreConsolide(libellePackDeLOffre,
                                                                                    data.idOffre,
@@ -571,18 +682,18 @@ system.debug('@@ json ' + jsonOut);*/
                                                                                    article,
                                                                                   ftaOutput,
                                                                                   isOffreRepli);
+                            
                             Double mensValue = 0;
                             Double mensGazValue = 0;
                             if (!string.isBlank(offreValue.mens)) {
                                 mensValue = Double.valueOf(offreValue.mens);
                             }
+                            
                             if (!string.isBlank(offreValue.mensGaz)) {
                                 mensGazValue = Double.valueOf(offreValue.mensGaz);
                             }
+                            
                             offreValue.mensTotal = String.valueOf(mensValue + mensGazValue);
-                            //RJM : 17/04/2020 FT2-445
-                            offreValue.mensTotalDecimal = Decimal.valueOf(mensValue + mensGazValue).setScale(2);
-                            //
                             mapLibelleParPix.put(libellePackDeLOffre, offreValue );
                         } else {
                             PrixOffreConsolide offreNouveauInit = new PrixOffreConsolide(libellePackDeLOffre,
@@ -618,7 +729,9 @@ offreExistant.mens=offreExistant.mens==null?offreNouveauInit.mens:offreExistant.
                                 } else {
                                     mensValue = Double.valueOf(offreExistant.mens);
                                 }
+                                
                             }
+                            
                             if (offreExistant.aboGaz == null) {
                                 offreExistant.mapConsoGazByTypeComptage = offreNouveauInit.mapConsoGazByTypeComptage;
                                 offreExistant.aboGaz = offreNouveauInit.aboGaz;
@@ -629,26 +742,15 @@ offreExistant.mens=offreExistant.mens==null?offreNouveauInit.mens:offreExistant.
                                     mensGazValue = Double.valueOf(offreExistant.mensGaz);
                                 }
                             }
+                            
                             if (offreExistant.mens != null && offreExistant.mensGaz != null) {
                                 offreExistant.mensTotal = String.valueOf(Double.valueOf(offreExistant.mens) + Double.valueOf(offreExistant.mensGaz));
-                                //RJM : 17/04/2020 FT2-445
-                                offreExistant.mensTotalDecimal = Decimal.valueOf(Double.valueOf(offreExistant.mens) + Double.valueOf(offreExistant.mensGaz)).setScale(2);
-                                //
                             } else if (offreExistant.mens != null && offreExistant.mensGaz == null) {
                                 offreExistant.mensTotal = String.valueOf(Double.valueOf(offreExistant.mens));
-                                //RJM : 17/04/2020 FT2-445
-                                offreExistant.mensTotalDecimal = Decimal.valueOf(Double.valueOf(offreExistant.mens)).setScale(2);
-                                //
                             } else if (offreExistant.mens == null && offreExistant.mensGaz != null) {
                                 offreExistant.mensTotal = String.valueOf(Double.valueOf(offreExistant.mensGaz));
-                                //RJM : 17/04/2020 FT2-445
-                                offreExistant.mensTotalDecimal = Decimal.valueOf(Double.valueOf(offreExistant.mensGaz)).setScale(2);
-                                //
                             } else {
                                 offreExistant.mensTotal = String.valueOf(0);
-                                //RJM : 17/04/2020 FT2-445
-                                offreExistant.mensTotalDecimal = Decimal.valueOf(0).setScale(2);
-                                //
                             }
                             system.debug('@@@ offreExistant ' + offreExistant);
                             system.debug('@@@ libellePackDeLOffre ' + libellePackDeLOffre);
@@ -666,26 +768,29 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
             if (offreAffiche.mens != null && offreAffiche.mensGaz != null) {
                 /*offreAffiche.mens = String.ValueOf(Decimal.valueOf(offreAffiche.mens) + Decimal.valueOf(offreAffiche.mensGaz)) + ' €/mois';*/
                 offreAffiche.mensTotal = String.ValueOf(Decimal.valueOf(offreAffiche.mens) + Decimal.valueOf(offreAffiche.mensGaz));
-                //RJM : 17/04/2020 FT2-445
-                offreAffiche.mensTotalDecimal = (Decimal.valueOf(offreAffiche.mens) + Decimal.valueOf(offreAffiche.mensGaz)).setScale(2);
-                //
                 offreAffiche.mens = String.ValueOf(Decimal.valueOf(offreAffiche.mens)) + ' €/mois';
                 offreAffiche.mensGaz = String.ValueOf(Decimal.valueOf(offreAffiche.mensGaz)) + ' €/mois';
             } else {
                 if (offreAffiche.mens != null) {
                     offreAffiche.mens = offreAffiche.mens + ' €/mois';
                 }
+                
                 if (offreAffiche.mensGaz != null) {
                     offreAffiche.mensGaz = offreAffiche.mensGaz + ' €/mois';
                 }
+                
             }           
              if(!String.isBlank(contextMoveIn) && !String.isBlank(packCode) && contextMoveIn == 'harmonica' && offreAffiche.idPack == packCode){
                 offreAffiche.isOffrePousseeHarmonica = true;
                 OffreChoisie =  offreAffiche;
              }
+            
         }
+        
+        system.debug('@@@ mapOffrePrix json ' + JSON.serialize(listOffreAvecPrix));
         return listOffreAvecPrix;
     }
+    
     /*@Author: RWA
 *@Description: model du wrapper
 *@CreatedDate:
@@ -702,6 +807,7 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
         public Double AboFournitureHT;
         public Double AboFournitureTTC;
         public Map<String, Map<String, Double>> mapConsoByType;
+        
         /*@Author: RWA
 *@Description: constructeur du wrapper
 *@CreatedDate:
@@ -714,13 +820,16 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
             this.mapConsoByType = mapConsoByType;
         }
     }
+    
     /* @Author: Joel
 *@Description : vérifier l'éligilité à une offre
+
 */
   /*  public static Boolean checkEligibility(String codeOffre,String codePackage,String niveauOuvertureService,String typePdl){
         Boolean resultEligibility = false;
         list<OffresConditionnel__mdt> listOffresConditionne = [select CodeOffre__c,CodePackage__c,NiveauOuvertureService__c,TypePdl__c from OffresConditionnel__mdt where 
                                                                CodeOffre__c =:codeOffre and CodePackage__c =:codePackage];
+        
         if (listOffresConditionne.size() > 0) {
             for (OffresConditionnel__mdt offreConditionnel : listOffresConditionne) {
                 if (offreConditionnel.NiveauOuvertureService__c == niveauOuvertureService && offreConditionnel.TypePdl__c == typePdl) {
@@ -731,8 +840,10 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
             resultEligibility = true;
         }
         system.debug('### resultEligibility '+resultEligibility+' codeOffre '+codeOffre+' codePackage '+codePackage);
+        
         return resultEligibility;
     } */
+    
     /*@Author: RWA
 *@Description: model des offres consolidées
 *@CreatedDate:
@@ -763,8 +874,9 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
         public String articleURL;
         public String articlePreview;
         public String ftaOutput;
-        //RJM : 17/04/2020 FT2-445
-        public Decimal mensTotalDecimal;
+        
+        
+        
         /*@Author: RWA
 *@Description: constructeur des offres consolidées
 *@CreatedDate:
@@ -780,8 +892,9 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
                                       this.CAR = CAR;
                                       this.CAE = CAE;
                                       this.typeOffre = typeOfProduct.get(codeOffre);
-                                      this.articleURL = (article != null ? article.url : '');
-                                      this.articlePreview = (article != null ? article.preview : '');
+                                      system.debug('@ idPack , article.url = '+idPack+' , '+article);
+                                      this.articleURL = article.url;
+                                      this.articlePreview = article.preview;
                                       this.ftaOutput = ftaOutput;
                                       this.isOffreRepli = isOffreRepli;
                                   if (Double.valueOf('0') == prixELec.AboTTC) {
@@ -793,7 +906,7 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
                                           List<Double> listConsoTTC = new List<Double>();
                                           for (String consLabel : mapConsoByType.keySet()) {
                                               Map<String, Double> montants = mapConsoByType.get(consLabel);
-                                              String consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' € TTC/kWh  (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
+                                              String consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' €/kWh TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
                                               String consolLabelTransc;
                                               if (consLabel == 'P') {
                                                   consolLabelTransc = 'HP';
@@ -806,6 +919,7 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
                                                   listConsoTTC.add(calculConsommation(montants.get('TTC'),CAE_WE));
                                               }else if (consLabel == 'S' && typeOfProduct.get(codeOffre) == 'TradeOFF'){
                                                   consolLabelTransc = 'Base';    // base acheminement                                          
+                                                  
                                               }else if (consLabel == 'COS') {
                                                   consolLabelTransc = 'Base_';  // base fourniture
                                               }else if (consLabel == 'COP') {
@@ -821,26 +935,32 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
                                               }
                                               /*else if (consLabel == 'P' ){
                                                   consolLabelTransc = 'HP';
+                                                  
                                               }else if (consLabel == 'C'){
                                                   consolLabelTransc = 'HC';
+                                                  
                                               }*/else if (consLabel == 'U'){
-                                                  consolLabelTransc = 'HP';
+                                                  consolLabelTransc = 'HPH';
+                                                  
                                               }else if (consLabel == 'A'){
-                                                  consolLabelTransc = 'HC';
+                                                  consolLabelTransc = 'HCH';
+                                                  
                                               }else if (consLabel == 'L'){
-                                                  consolLabelTransc = 'HP';
+                                                  consolLabelTransc = 'HPB';
+                                                  
                                               }else if (consLabel == 'R'){
-                                                  consolLabelTransc = 'HC';
+                                                  consolLabelTransc = 'HCB';
                                               }else if( consLabel == 'ACHAB'){
                                                   consolLabelTransc = 'Acheminement'; // abonement elec
-                                                  consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(2)) + ' € TTC/an (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(2)) + ' HT)';
+                                                  consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' € /an TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
                                               }else if(consLabel == 'AB'){
                                                   consolLabelTransc = 'Fourniture';// abonement elec
-                                                  consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(2)) + ' € TTC/an (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(2)) + ' HT)';
+                                                  consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' € /an TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
                                               }
                                               else if(consLabel == 'OB'){
                                                   consolLabelTransc = 'OBLIGATIONS';
-                                                  consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' € TTC/kWh (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
+                                                  consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' € /An TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
+
                                               }
                                               else{
                                                   consolLabelTransc = consLabel;
@@ -849,14 +969,17 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
                                               mapConsoByTypeComptage.put(consolLabelTransc, consolLabelTransc + ':' + consValue);
                                               /*listConsoTTC.add(montants.get('TTC'));*/
                                           }
+                                          
                                           if(typeOfProduct.get(codeOffre) == 'TradeOFF'){
                                               this.mens = String.ValueOf(calculMensTradeOFF(Double.valueOf(prixELec.AboTTC),Double.valueOf(prixELec.coTTC), this.CAE));
-                                              this.consoElec = 'CONSOMMATION:'+Decimal.valueOf(prixELec.coTTC).setscale(5)+' € TTC/kWh'+' ('+Decimal.ValueOf(prixELec.CoHT).setscale(5)+ ' HT)';
+                                              this.consoElec = 'CONSOMMATION:'+prixELec.coTTC+' € TTC/Kwh'+' ('+prixELec.CoHT + ' HT)';
                                           }else{
                                               this.mens = String.ValueOf(calculMens( Double.valueOf(prixELec.AboTTC), listConsoTTC, this.CAE));
                                               //+ ' €/mois'
                                           }
+
                                       }
+                                      
                                       if (Double.valueOf('0') == prixGaz.AboTTC) {
                                           this.aboGaz = null;
                                           this.mensGaz = null;
@@ -865,18 +988,23 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
                                           Map<String, Map<String, Double>> mapConsoByTypeGAz = prixGaz.mapConsoByType;
                                           List<Double> listConsoTTCGaz = new List<Double>();
                                           for (String consLabel : mapConsoByTypeGAz.keySet()) {
+
                                               Map<String, Double> montants = mapConsoByTypeGAz.get(consLabel);
                                               String consolLabelTransc;
-                                              String consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' € TTC/kWh (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
+                                              String consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' €/kWh TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
+
                                               if( consLabel == 'ACHAB'){
                                                   consolLabelTransc = 'Acheminement_abo'; // abonement elec
-                                                  consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(2)) + ' € TTC/an (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(2)) + ' HT)';
+                                                  consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' €/an TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
+
                                               }else if(consLabel == 'AB'){
                                                   consolLabelTransc = 'Fourniture_abo';// abonement elec
-                                                  consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(2)) + ' € TTC/an (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(2)) + ' HT)';
+                                                  consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' €/an TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
+
                                               }else if(consLabel == 'OB'){
                                                   consolLabelTransc = 'OBLIGATIONS';
-                                                  consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' € TTC/kWh (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
+                                                  consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' €/An TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
+
                                               }else if(consLabel == 'ACHCO'){
                                                   consolLabelTransc = 'Acheminement_conso'; // conso gaz
                                               }else if(consLabel == 'CO'){
@@ -884,29 +1012,36 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
                                               }else{
                                                   consolLabelTransc = consLabel;
                                               }
+
+                                              
                                               mapConsoGazByTypeComptage.put(consolLabelTransc, consValueGaz);
                                               listConsoTTCGaz.add(calculConsommation(montants.get('TTC'),CAR));
                                           }
+                                          
                                           if(typeOfProduct.get(codeOffre) == 'TradeOFF'){
                                             this.mensGaz = String.ValueOf(calculMensTradeOFF(Double.valueOf(prixGaz.AboTTC),Double.valueOf(prixGaz.coTTC), this.CAR));                                             
                                           }else{
                                             this.mensGaz = String.ValueOf(calculMens( Double.valueOf(prixGaz.AboTTC), listConsoTTCGaz, this.CAR));
                                           }
+                                        
+                                          
+                                          
                                       }
+                                      
                                       double mensValue = 0;
                                       double mensGazValue = 0;
                                       if (this.mens != null) {
                                           mensValue = Double.valueOf(this.mens);
                                       }
+                                      
                                       if (this.mensGaz != null) {
                                           mensGazValue = Double.valueOf(this.mensGaz);
                                       }
+                                      
                                       this.mensTotal = String.valueOf(mensValue + mensGazValue);
-                                      //RJM : 17/04/2020 FT2-445
-                                      this.mensTotalDecimal = Decimal.valueOf(mensValue + mensGazValue).setscale(2);
-                                      //
                                   }
     }
+    
     /*@Author: RWA
 *@Description: initialisation du contexte
 *@CreatedDate:
@@ -921,8 +1056,10 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
         octx.systemPath = new gdfsuezComBefChpCommunV3.systemPath_element();
         octx.systemPath.system_x = new gdfsuezComBefChpCommunV3.system_element[] {osource};
             //octx.systemPath.system_x.add(osource);
+            
             return octx;
     }
+    
     /*@Author: RWA
 *@Description: calcul de la mens
 *@CreatedDate:
@@ -931,6 +1068,7 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
     public static Decimal calculMens(Double Abo, List<Double> mapConsoByCAECAR, Double CAECAR) {        
         Double mens;
         Double estimationConsTotal = 0;
+        
         for (Double estimationCons : mapConsoByCAECAR) {
             //estimationConsTotal = estimationConsTotal + (estimationCons * CAECAR);
             estimationConsTotal = estimationConsTotal + estimationCons;
@@ -939,12 +1077,17 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
         Decimal mensCalcule = Decimal.valueOf(mens).setscale(0);
         return mensCalcule;
     }
+    
+
     public static Decimal calculMensTradeOFF(Double AboTTC,Double coTTC, Double CAECAR) {
+
         Double mens;
         mens = (AboTTC+(coTTC*CAECAR))/11;
         Decimal mensCalcule = Decimal.valueOf(mens).setscale(0);
         return mensCalcule;
     }
+    
+    
     /*@Author: MHA
 *@Description: calcul Consommation
 *@CreatedDate: 05/03/2019
@@ -955,8 +1098,10 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
         consoByCAECARResult = consoByCAECAR * CARCAE;
         return consoByCAECARResult;
     }
+
     public class Article {
         public String url;
         public String preview;
     }
+    
 }
