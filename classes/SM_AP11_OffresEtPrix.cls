@@ -147,15 +147,15 @@ Datetime vDateEffetSouhaitee=Datetime.valueOf(vDateEffet);
         if(listStrucMesFour.size() > 0){// Dual ou Elec
 		           // Si on est dans un context harmonica, récupère le produit harmonica en se basant son code pack 
             if(contextMoveIn == 'harmonica' && !String.isBlank(packCode)){
-                offres = [SELECT id, TypeOffre__c,FamilyLabel__c,SM_structureMesureFournisseur__c, Family, ProductCode, vlocity_cmt__SpecificationType__c, ArticleURL__c, ArticlePreview__c
+                offres = [SELECT id, TypeOffre__c,FamilyLabel__c,SM_structureMesureFournisseur__c, Family, ProductCode, vlocity_cmt__SpecificationType__c, ArticleURL__c, ArticlePreview__c,Ordre_daffichage__c
                           FROM Product2
                           WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND (SM_structureMesureFournisseur__c = :listStrucMesFour OR Family =: packCode)
-                          ORDER BY Tech_OrdreProduit__c asc];
+                          ORDER BY Ordre_daffichage__c asc];
             }else {
-                offres = [SELECT id, TypeOffre__c,FamilyLabel__c,SM_structureMesureFournisseur__c, Family, ProductCode, vlocity_cmt__SpecificationType__c, ArticleURL__c, ArticlePreview__c
+                offres = [SELECT id, TypeOffre__c,FamilyLabel__c,SM_structureMesureFournisseur__c, Family, ProductCode, vlocity_cmt__SpecificationType__c, ArticleURL__c, ArticlePreview__c,Ordre_daffichage__c
                           FROM Product2
                           WHERE  (vlocity_cmt__Type__c = : vEnergyTypeOptions AND IsActive = true AND SM_structureMesureFournisseur__c = :listStrucMesFour)
-                          ORDER BY Tech_OrdreProduit__c asc];
+                          ORDER BY Ordre_daffichage__c asc];
             }
             if(vEnergyTypeOptions == 'Duo' && offres.size()>0){
                 List<String> listProductFamily = new List<String>();
@@ -170,15 +170,15 @@ Datetime vDateEffetSouhaitee=Datetime.valueOf(vDateEffet);
                               AND IsActive = true 
                               AND Family IN :listProductFamily
                                   AND ((SM_structureMesureFournisseur__c IN:listStrucMesFour OR SM_structureMesureFournisseur__c = null) OR Family =: packCode)
-                                  ORDER BY Tech_OrdreProduit__c asc];
+                                  ];
                     }else{
                         offres = [SELECT id,TypeOffre__c, FamilyLabel__c,SM_structureMesureFournisseur__c, Family, ProductCode, vlocity_cmt__SpecificationType__c, ArticleURL__c, ArticlePreview__c
-                                  FROM Product2
-                                  WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions
-                                  AND IsActive = true 
-                                  AND Family IN :listProductFamily
+                              FROM Product2
+                              WHERE  vlocity_cmt__Type__c = : vEnergyTypeOptions
+                              AND IsActive = true 
+                              AND Family IN :listProductFamily
                                   AND (SM_structureMesureFournisseur__c IN:listStrucMesFour OR SM_structureMesureFournisseur__c = null)
-                                  ORDER BY Tech_OrdreProduit__c asc];
+                                  ];
                     }
                 }
                 System.debug('### aka offres 2 ' + offres);
@@ -824,23 +824,23 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
                                               }else if (consLabel == 'C'){
                                                   consolLabelTransc = 'HC';
                                               }*/else if (consLabel == 'U'){
-                                                  consolLabelTransc = 'HP Haute';
+                                                  consolLabelTransc = 'HP';
                                               }else if (consLabel == 'A'){
-                                                  consolLabelTransc = 'HC Haute';
+                                                  consolLabelTransc = 'HC';
                                               }else if (consLabel == 'L'){
-                                                  consolLabelTransc = 'HP Basse';
+                                                  consolLabelTransc = 'HP';
                                               }else if (consLabel == 'R'){
-                                                  consolLabelTransc = 'HC Basse';
+                                                  consolLabelTransc = 'HC';
                                               }else if( consLabel == 'ACHAB'){
                                                   consolLabelTransc = 'Acheminement'; // abonement elec
-                                                  consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(2)) + ' € /an TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(2)) + ' HT)';
+                                                  consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(2)) + ' € TTC/an (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(2)) + ' HT)';
                                               }else if(consLabel == 'AB'){
                                                   consolLabelTransc = 'Fourniture';// abonement elec
-                                                  consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(2)) + ' € /an TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(2)) + ' HT)';
+                                                  consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(2)) + ' € TTC/an (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(2)) + ' HT)';
                                               }
                                               else if(consLabel == 'OB'){
                                                   consolLabelTransc = 'OBLIGATIONS';
-                                                  consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' € /An TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
+                                                  consValue = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' € TTC/kWh (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
                                               }
                                               else{
                                                   consolLabelTransc = consLabel;
@@ -851,7 +851,7 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
                                           }
                                           if(typeOfProduct.get(codeOffre) == 'TradeOFF'){
                                               this.mens = String.ValueOf(calculMensTradeOFF(Double.valueOf(prixELec.AboTTC),Double.valueOf(prixELec.coTTC), this.CAE));
-                                              this.consoElec = 'CONSOMMATION:'+Decimal.valueOf(prixELec.coTTC).setscale(5)+' € TTC/Kwh'+' ('+Decimal.ValueOf(prixELec.CoHT).setscale(5)+ ' HT)';
+                                              this.consoElec = 'CONSOMMATION:'+Decimal.valueOf(prixELec.coTTC).setscale(5)+' € TTC/kWh'+' ('+Decimal.ValueOf(prixELec.CoHT).setscale(5)+ ' HT)';
                                           }else{
                                               this.mens = String.ValueOf(calculMens( Double.valueOf(prixELec.AboTTC), listConsoTTC, this.CAE));
                                               //+ ' €/mois'
@@ -867,16 +867,16 @@ offreExistant.mensGaz=offreExistant.mensGaz==null?offreNouveauInit.mensGaz:offre
                                           for (String consLabel : mapConsoByTypeGAz.keySet()) {
                                               Map<String, Double> montants = mapConsoByTypeGAz.get(consLabel);
                                               String consolLabelTransc;
-                                              String consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' €/kWh TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
+                                              String consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' € TTC/kWh (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
                                               if( consLabel == 'ACHAB'){
                                                   consolLabelTransc = 'Acheminement_abo'; // abonement elec
-                                                  consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(2)) + ' €/an TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(2)) + ' HT)';
+                                                  consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(2)) + ' € TTC/an (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(2)) + ' HT)';
                                               }else if(consLabel == 'AB'){
                                                   consolLabelTransc = 'Fourniture_abo';// abonement elec
-                                                  consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(2)) + ' €/an TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(2)) + ' HT)';
+                                                  consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(2)) + ' € TTC/an (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(2)) + ' HT)';
                                               }else if(consLabel == 'OB'){
                                                   consolLabelTransc = 'OBLIGATIONS';
-                                                  consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' €/kWh TTC (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
+                                                  consValueGaz = String.valueOf(Decimal.valueOf(montants.get('TTC')).setscale(5)) + ' € TTC/kWh (' + String.valueOf(Decimal.valueOf(montants.get('HT')).setscale(5)) + ' HT)';
                                               }else if(consLabel == 'ACHCO'){
                                                   consolLabelTransc = 'Acheminement_conso'; // conso gaz
                                               }else if(consLabel == 'CO'){
