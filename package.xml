@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>AppleWatch</members>
-        <members>AppleWatchTest</members>
-        <name>ApexClass</name>
+        <members>Dinner__c.VS_Field1_Test_2__c</members>
+        <members>Dinner__c.VS_Field2_Test_2__c</members>
+        <members>Dinner__c.VS_Field3_Test_2__c</members>
+        <members>Dinner__c.VS_Field4_Test_2__c</members>
+        <name>CustomField</name>
     </types>
     <types>
-        <members>Case.CCH_Test__c</members>
-        <name>CustomField</name>
+        <members>Dinner_2_Set</members>
+        <name>PermissionSet</name>
     </types>
     <version>48.0</version>
 </Package>
