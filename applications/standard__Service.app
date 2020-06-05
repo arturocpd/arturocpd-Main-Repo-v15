@@ -11,4 +11,10 @@
     <tabs>standard-Solution</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>Dinner__c</tabs>
+    <tabs>CSTM_Object__c</tabs>
+    <tabs>Knowledge__kav</tabs>
+    <tabs>IdeasVFTab</tabs>
+    <tabs>OLS_Test__c</tabs>
+    <tabs>GenderTest__c</tabs>
 </CustomApplication>

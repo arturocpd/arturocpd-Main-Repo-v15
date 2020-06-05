@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <excludeButtons>Submit</excludeButtons>
     <feedLayout>
         <autocollapsePublisher>true</autocollapsePublisher>
         <compactFeed>true</compactFeed>
@@ -142,6 +141,12 @@
     </miniLayout>
     <relatedLists>
         <fields>Name</fields>
+        <fields>CreatedBy</fields>
+        <fields>CreatedDate</fields>
+        <relatedList>ServiceReportRelatedList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Name</fields>
         <fields>Asset</fields>
         <relatedList>WorkOrderLineItems</relatedList>
     </relatedLists>
@@ -177,6 +182,29 @@
         <fields>Priority</fields>
         <fields>Status</fields>
         <relatedList>ChildWorkOrders</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Name</fields>
+        <fields>Contact</fields>
+        <fields>Account</fields>
+        <fields>Status</fields>
+        <fields>SchedStartTime</fields>
+        <fields>SchedEndTime</fields>
+        <fields>EarliestStartTime</fields>
+        <relatedList>ServiceAppointments</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Skill</fields>
+        <fields>SkillLevel</fields>
+        <relatedList>SkillRequirements</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>CreatedDate</fields>
+        <fields>StepStatus</fields>
+        <fields>OriginalActor</fields>
+        <fields>Actor</fields>
+        <fields>Comments</fields>
+        <relatedList>RelatedProcessHistoryList</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

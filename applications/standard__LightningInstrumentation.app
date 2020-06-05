@@ -6,5 +6,8 @@
     <label>LightningInstrumentation</label>
     <navType>Standard</navType>
     <tabs>standard-LightningInstrumentation</tabs>
+    <tabs>IdeasVFTab</tabs>
+    <tabs>OLS_Test__c</tabs>
+    <tabs>GenderTest__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

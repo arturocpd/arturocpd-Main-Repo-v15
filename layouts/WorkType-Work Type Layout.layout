@@ -43,10 +43,6 @@
                 <behavior>Readonly</behavior>
                 <field>CreatedById</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>OwnerId</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -68,6 +64,16 @@
     </layoutSections>
     <relatedLists>
         <relatedList>RelatedEntityHistoryList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Product2</fields>
+        <fields>QuantityRequired</fields>
+        <relatedList>ProductsRequired</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Skill</fields>
+        <fields>SkillLevel</fields>
+        <relatedList>SkillRequirements</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>

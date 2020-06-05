@@ -42,29 +42,6 @@
     </layoutSections>
     <layoutSections>
         <customLabel>false</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>System Information</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CreatedById</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>OwnerId</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>LastModifiedById</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
         <editHeading>false</editHeading>
         <label>Custom Links</label>
@@ -77,7 +54,29 @@
         <fields>ParentLocationId</fields>
     </miniLayout>
     <relatedLists>
-        <relatedList>RelatedFileList</relatedList>
+        <fields>Name</fields>
+        <fields>AddressType</fields>
+        <fields>Description</fields>
+        <relatedList>Addresses</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Name</fields>
+        <fields>ParentRecord</fields>
+        <fields>Type</fields>
+        <relatedList>AssociatedLocations</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Name</fields>
+        <fields>Product2</fields>
+        <fields>QuantityOnHand</fields>
+        <fields>QuantityUnitOfMeasure</fields>
+        <relatedList>ProductItems</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Name</fields>
+        <fields>ServiceTerritory</fields>
+        <fields>Location</fields>
+        <relatedList>ServiceTerritoryLocations</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>ASSET.NAME</fields>

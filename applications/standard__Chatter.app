@@ -9,4 +9,9 @@
     <tabs>standard-OtherUserProfile</tabs>
     <tabs>standard-CollaborationGroup</tabs>
     <tabs>standard-File</tabs>
+    <tabs>Dinner__c</tabs>
+    <tabs>CSTM_Object__c</tabs>
+    <tabs>IdeasVFTab</tabs>
+    <tabs>OLS_Test__c</tabs>
+    <tabs>GenderTest__c</tabs>
 </CustomApplication>
