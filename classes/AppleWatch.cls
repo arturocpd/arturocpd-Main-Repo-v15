@@ -8,8 +8,8 @@ Public with sharing Class AppleWatch{
         t.WhatId      = opp.Id;
         insert t;
      /*lines PB*/
-     /*Lines FB2*/ 
-     /*Lines FB3*/
+     /*Lines PB2*/ 
+     /*Lines PB3*/
      
    }
   
