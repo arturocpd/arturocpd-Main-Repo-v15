@@ -1224,6 +1224,22 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- SubTrade Channel --></label>
+        <name>SubTrade_Channel__c</name>
+        <picklistValues>
+            <masterLabel>001 - Bakery</masterLabel>
+            <translation><!-- 001 - Bakery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>020</masterLabel>
+            <translation><!-- 020 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>021 - Hotell</masterLabel>
+            <translation><!-- 021 - Hotell --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Upsell Opportunity --></label>
         <name>UpsellOpportunity__c</name>
         <picklistValues>

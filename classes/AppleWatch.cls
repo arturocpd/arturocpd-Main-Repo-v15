@@ -16,4 +16,3 @@ Public with sharing Class AppleWatch{
   }
  
  }
-
