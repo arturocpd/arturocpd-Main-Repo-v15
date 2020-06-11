@@ -189,6 +189,30 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Dinner_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Dinner Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Full</fullName>
+                    <default>false</default>
+                    <label>Full</label>
+                </value>
+                <value>
+                    <fullName>Partial</fullName>
+                    <default>false</default>
+                    <label>Partial</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>External_Auto__c</fullName>
         <encryptionScheme>None</encryptionScheme>
         <externalId>true</externalId>
@@ -778,6 +802,17 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Dinner_Type__c</picklist>
+            <values>
+                <fullName>Full</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Picklist_Dinner_Table__c</picklist>
             <values>
                 <fullName>Dinner Table1</fullName>
@@ -820,6 +855,17 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Dinner_Type__c</picklist>
+            <values>
+                <fullName>Full</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Picklist_Dinner_Table__c</picklist>
             <values>
                 <fullName>Dinner Table1</fullName>
@@ -854,6 +900,17 @@
             </values>
             <values>
                 <fullName>High Touch%2FHigh Urgency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dinner_Type__c</picklist>
+            <values>
+                <fullName>Full</fullName>
                 <default>false</default>
             </values>
             <values>
