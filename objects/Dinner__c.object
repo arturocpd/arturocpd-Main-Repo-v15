@@ -148,7 +148,7 @@
         <label>Cool Dinner</label>
     </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>description field 2</description>
+    <description>Change description 22222</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -289,6 +289,7 @@
     </fields>
     <fields>
         <fullName>VS_Field2_Test_2__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
         <externalId>false</externalId>
         <label>VS Field2 Test 2</label>
         <length>13</length>
@@ -310,19 +311,12 @@
     </fields>
     <fields>
         <fullName>VS_Field4_Test_2__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
         <externalId>false</externalId>
         <label>VS Field4 Test 2</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <type>Phone</type>
-    </fields>
-    <fields>
-        <fullName>VS_PS_Test_D__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>VS PS Test D</label>
-        <trackHistory>false</trackHistory>
-        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>historyRetentionPolicy__c</fullName>
@@ -332,6 +326,7 @@
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
+    <gender>Feminine</gender>
     <label>Dinner</label>
     <listViews>
         <fullName>All</fullName>
@@ -353,6 +348,7 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Dinners</pluralLabel>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
     <recordTypes>
         <fullName>Dinner_RT</fullName>
         <active>true</active>
