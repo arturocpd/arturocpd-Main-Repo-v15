@@ -615,6 +615,35 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>SubTrade_Channel__c</fullName>
+        <externalId>false</externalId>
+        <label>SubTrade Channel</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>001 - Bakery</fullName>
+                    <default>false</default>
+                    <label>001 - Bakery</label>
+                </value>
+                <value>
+                    <fullName>020</fullName>
+                    <default>false</default>
+                    <label>020</label>
+                </value>
+                <value>
+                    <fullName>021 - Hotell</fullName>
+                    <default>false</default>
+                    <label>021 - Hotell</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>TickerSymbol</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -979,6 +1008,21 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>SubTrade_Channel__c</picklist>
+            <values>
+                <fullName>001 - Bakery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>021 - Hotell</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Type</picklist>
             <values>
                 <fullName>Channel Partner %2F Reseller</fullName>
@@ -1317,6 +1361,21 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>SubTrade_Channel__c</picklist>
+            <values>
+                <fullName>001 - Bakery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>021 - Hotell</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Type</picklist>
             <values>
                 <fullName>Channel Partner %2F Reseller</fullName>
@@ -1643,6 +1702,21 @@
             </values>
             <values>
                 <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SubTrade_Channel__c</picklist>
+            <values>
+                <fullName>001 - Bakery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>021 - Hotell</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1986,6 +2060,21 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>SubTrade_Channel__c</picklist>
+            <values>
+                <fullName>001 - Bakery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>021 - Hotell</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Type</picklist>
             <values>
                 <fullName>Channel Partner %2F Reseller</fullName>
@@ -2321,6 +2410,21 @@
             </values>
             <values>
                 <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SubTrade_Channel__c</picklist>
+            <values>
+                <fullName>001 - Bakery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>021 - Hotell</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
