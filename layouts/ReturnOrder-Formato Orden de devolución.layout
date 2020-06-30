@@ -118,6 +118,13 @@
         <style>CustomLinks</style>
     </layoutSections>
     <relatedLists>
+        <fields>Name</fields>
+        <fields>DestinationLocation</fields>
+        <fields>SourceLocation</fields>
+        <fields>CreatedBy</fields>
+        <relatedList>ReturnOrderLineItems</relatedList>
+    </relatedLists>
+    <relatedLists>
         <relatedList>RelatedEntityHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
@@ -140,6 +147,16 @@
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedFileList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Name</fields>
+        <fields>Product2</fields>
+        <fields>SourceProductItem</fields>
+        <fields>QuantityReceived</fields>
+        <fields>DestinationLocation</fields>
+        <fields>IsReceived</fields>
+        <fields>ReceivedBy</fields>
+        <relatedList>ProductTransfers</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>Name</fields>
