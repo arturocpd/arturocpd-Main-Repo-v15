@@ -136,6 +136,11 @@
         <relatedList>WorkOrders</relatedList>
     </relatedLists>
     <relatedLists>
+        <fields>Asset</fields>
+        <fields>ContractLineItem</fields>
+        <relatedList>MaintenanceAssets</relatedList>
+    </relatedLists>
+    <relatedLists>
         <relatedList>RelatedFileList</relatedList>
     </relatedLists>
     <relatedLists>

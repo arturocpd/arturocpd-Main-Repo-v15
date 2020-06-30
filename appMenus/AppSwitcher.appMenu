@@ -41,14 +41,6 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>standard__LightningSalesConsole</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>standard__LightningService</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>standard__LightningSales</name>
         <type>CustomApplication</type>
     </appMenuItems>
@@ -131,6 +123,10 @@
     <appMenuItems>
         <name>Test_Connected_App</name>
         <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__SalesforceCMS</name>
+        <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
         <name>Copado_DX</name>

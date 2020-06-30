@@ -9,6 +9,7 @@
         <isAdminApproved>true</isAdminApproved>
         <scopes>Api</scopes>
         <scopes>Web</scopes>
+        <scopes>Full</scopes>
         <scopes>RefreshToken</scopes>
     </oauthConfig>
     <profileName>System Administrator</profileName>
