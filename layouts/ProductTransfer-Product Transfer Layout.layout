@@ -102,6 +102,13 @@
         <relatedList>RelatedProcessHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
+        <fields>Name</fields>
+        <fields>RelatedRecord</fields>
+        <fields>TransactionType</fields>
+        <fields>Quantity</fields>
+        <relatedList>ProductItemTransaction</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>TASK.SUBJECT</fields>
         <fields>TASK.WHO_NAME</fields>
         <fields>ACTIVITY.TASK</fields>

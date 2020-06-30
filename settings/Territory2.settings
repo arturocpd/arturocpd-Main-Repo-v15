@@ -4,4 +4,5 @@
     <defaultCaseAccessLevel>None</defaultCaseAccessLevel>
     <defaultContactAccessLevel>Edit</defaultContactAccessLevel>
     <defaultOpportunityAccessLevel>None</defaultOpportunityAccessLevel>
+    <enableTerritoryManagement2>false</enableTerritoryManagement2>
 </Territory2Settings>
