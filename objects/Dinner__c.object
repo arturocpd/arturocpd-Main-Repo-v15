@@ -148,7 +148,7 @@
         <label>Cool Dinner</label>
     </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>description field 2</description>
+    <description>Change description 22222</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -178,30 +178,6 @@
                     <fullName>No</fullName>
                     <default>false</default>
                     <label>No</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
-        <fullName>Dinner_Type__c</fullName>
-        <externalId>false</externalId>
-        <label>Dinner Type</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Full</fullName>
-                    <default>false</default>
-                    <label>Full</label>
-                </value>
-                <value>
-                    <fullName>Partial</fullName>
-                    <default>false</default>
-                    <label>Partial</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -304,12 +280,41 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>VS_PS_Test_D__c</fullName>
+        <fullName>VS_Field1_Test_2__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
-        <label>VS PS Test D</label>
+        <label>VS Field1 Test 2</label>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>VS_Field2_Test_2__c</fullName>
+        <externalId>false</externalId>
+        <label>VS Field2 Test 2</label>
+        <length>13</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VS_Field3_Test_2__c</fullName>
+        <externalId>false</externalId>
+        <label>VS Field3 Test 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VS_Field4_Test_2__c</fullName>
+        <externalId>false</externalId>
+        <label>VS Field4 Test 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
     </fields>
     <fields>
         <fullName>historyRetentionPolicy__c</fullName>
@@ -358,17 +363,6 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Dinner_Type__c</picklist>
-            <values>
-                <fullName>Full</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partial</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>Picklist_Dinner_Table__c</picklist>
             <values>
                 <fullName>Dinner Table1</fullName>
@@ -403,17 +397,6 @@
             </values>
             <values>
                 <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Dinner_Type__c</picklist>
-            <values>
-                <fullName>Full</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partial</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -456,17 +439,6 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Dinner_Type__c</picklist>
-            <values>
-                <fullName>Full</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partial</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>Picklist_Dinner_Table__c</picklist>
             <values>
                 <fullName>Dinner Table1</fullName>
@@ -489,7 +461,7 @@
             </values>
         </picklistValues>
     </recordTypes>
-    <searchLayouts/>
+    <searchLayouts />
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
