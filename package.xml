@@ -5,5 +5,5 @@
         <members>CopadoBookControllerTest</members>
         <name>ApexClass</name>
     </types>
-    <version>46.0</version>
+    <version>48.0</version>
 </Package>

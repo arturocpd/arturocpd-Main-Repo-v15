@@ -508,23 +508,15 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>Install__c</fullName>
-        <defaultValue>false</defaultValue>
+        <fullName>JCS_NUMBER__c</fullName>
         <externalId>false</externalId>
-        <label>Install</label>
+        <label>JCS_NUMBER</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
         <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>IsCustomerPortal</fullName>
-    </fields>
-    <fields>
-        <fullName>IsExcludedFromRealign</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
-        <fullName>IsPartner</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Jigsaw</fullName>
