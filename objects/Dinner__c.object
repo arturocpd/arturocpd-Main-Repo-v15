@@ -289,6 +289,7 @@
     </fields>
     <fields>
         <fullName>VS_Field2_Test_2__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
         <externalId>false</externalId>
         <label>VS Field2 Test 2</label>
         <length>13</length>
@@ -310,6 +311,7 @@
     </fields>
     <fields>
         <fullName>VS_Field4_Test_2__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
         <externalId>false</externalId>
         <label>VS Field4 Test 2</label>
         <required>false</required>

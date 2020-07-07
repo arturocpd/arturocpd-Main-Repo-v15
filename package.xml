@@ -7,5 +7,9 @@
         <members>Dinner__c.VS_Field4_Test_2__c</members>
         <name>CustomField</name>
     </types>
+    <types>
+        <members>Dinner_2_Set</members>
+        <name>PermissionSet</name>
+    </types>
     <version>48.0</version>
 </Package>
