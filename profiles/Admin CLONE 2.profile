@@ -237,6 +237,7 @@
         <enabled>true</enabled>
         <name>List_CS__c</name>
     </customSettingAccesses>
+    <description>Profile description</description>
     <fieldPermissions>
         <editable>false</editable>
         <field>AR_CMDT__mdt.AR_CMDT_Field__c</field>
@@ -5010,18 +5011,6 @@
         <layout>Dinner__c-Dinner Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Dinner__c-Dinner Layout</layout>
-        <recordType>Dinner__c.Dinner_RT</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Dinner__c-Dinner Layout</layout>
-        <recordType>Dinner__c.Dinner_RT2</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Dinner__c-Dinner Layout</layout>
-        <recordType>Dinner__c.Nested_Dinner_RT</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Dinner__c-Dinner Layout10</layout>
         <recordType>Dinner__c.Dinner_RT3</recordType>
     </layoutAssignments>
@@ -5052,6 +5041,18 @@
     <layoutAssignments>
         <layout>Dinner__c-Dinner Layout9</layout>
         <recordType>Dinner__c.Dinner_RT8</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Dinner__c-Dinner Layout</layout>
+        <recordType>Dinner__c.Dinner_RT</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Dinner__c-Dinner Layout</layout>
+        <recordType>Dinner__c.Dinner_RT2</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Dinner__c-Dinner Layout</layout>
+        <recordType>Dinner__c.Nested_Dinner_RT</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Dinner__c-Lunch Layout</layout>
@@ -5424,6 +5425,12 @@
     <layoutAssignments>
         <layout>test_test__c-test%2Etest Layout</layout>
     </layoutAssignments>
+    <loginHours>
+        <mondayEnd>1440</mondayEnd>
+        <mondayStart>0</mondayStart>
+        <tuesdayEnd>1440</tuesdayEnd>
+        <tuesdayStart>0</tuesdayStart>
+    </loginHours>
     <loginIpRanges>
         <endAddress>62.97.100.250</endAddress>
         <startAddress>62.97.100.250</startAddress>
