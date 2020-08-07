@@ -7,7 +7,9 @@ Public with sharing Class AppleWatch{
         t.Priority    = 'High' ;
         t.WhatId      = opp.Id;
         insert t;
+
      /*Commit conflict1 Mod in Target Branch*/
+
      /*Commit conflict2*/
      
    }
