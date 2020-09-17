@@ -8,7 +8,7 @@ Public with sharing Class AppleWatch{
         t.WhatId      = opp.Id;
         insert t;
 
-     /*Commit conflict1 Mod in Target Branch*/
+     /*Commit conflict1 Mod in Target Branch MOD*/
 
      /*Commit conflict2*/
      
