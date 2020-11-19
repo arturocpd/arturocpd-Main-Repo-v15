@@ -4,5 +4,10 @@
         <members>AppleWatch</members>
         <name>ApexClass</name>
     </types>
-    <version>48.0</version>
+    <types>
+        <members>Case.Admin_Checkbox__c</members>
+        <members>Case.BitCoin__c</members>
+        <name>CustomField</name>
+    </types>
+    <version>50.0</version>
 </Package>
