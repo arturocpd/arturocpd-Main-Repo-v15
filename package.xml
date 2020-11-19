@@ -4,5 +4,9 @@
         <members>AppleWatch</members>
         <name>ApexClass</name>
     </types>
-    <version>48.0</version>
+    <types>
+        <members>AppleWatch</members>
+        <name>ApexTrigger</name>
+    </types>
+    <version>50.0</version>
 </Package>
