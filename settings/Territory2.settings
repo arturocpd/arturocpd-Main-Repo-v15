@@ -10,4 +10,6 @@
         <enableFilter>false</enableFilter>
         <runOnCreate>false</runOnCreate>
     </opportunityFilterSettings>
+    <showTM2EnabledBanner>false</showTM2EnabledBanner>
+    <t2ForecastAccessLevel>Read</t2ForecastAccessLevel>
 </Territory2Settings>

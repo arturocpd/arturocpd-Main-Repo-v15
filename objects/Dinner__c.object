@@ -164,6 +164,7 @@
         <externalId>false</externalId>
         <label>Dinner Type</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
         <valueSet>
@@ -189,36 +190,13 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>Dinner_Type__c</fullName>
-        <externalId>false</externalId>
-        <label>Dinner Type</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Full</fullName>
-                    <default>false</default>
-                    <label>Full</label>
-                </value>
-                <value>
-                    <fullName>Partial</fullName>
-                    <default>false</default>
-                    <label>Partial</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
         <fullName>External_Auto__c</fullName>
         <encryptionScheme>None</encryptionScheme>
         <externalId>true</externalId>
         <label>External Auto</label>
         <length>30</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
@@ -228,6 +206,7 @@
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>FLS Test Dinner PS</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
@@ -237,6 +216,7 @@
         <description>Description New</description>
         <externalId>false</externalId>
         <label>LateDinner</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Checkbox</type>
     </fields>
@@ -245,6 +225,7 @@
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Nested Field Test</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
@@ -253,6 +234,7 @@
         <externalId>false</externalId>
         <label>Picklist Dinner Table</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
         <valueSet>
@@ -277,6 +259,7 @@
         <externalId>false</externalId>
         <label>Picklist Dinner</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
         <valueSet>
@@ -305,6 +288,7 @@
         <referenceTo>Contact</referenceTo>
         <relationshipName>Dinners</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>true</trackTrending>
         <type>Lookup</type>
@@ -314,6 +298,7 @@
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>TEST US</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
@@ -322,14 +307,28 @@
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Table</label>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Test_Conflict_Resolution__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Test Conflict Resolution</label>
+        <length>14</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>VS_Field1_Test_2__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>VS Field1 Test 2</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
@@ -340,6 +339,7 @@
         <label>VS Field2 Test 2</label>
         <length>13</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
@@ -351,6 +351,7 @@
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -361,6 +362,7 @@
         <externalId>false</externalId>
         <label>VS Field4 Test 2</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Phone</type>
     </fields>
@@ -369,6 +371,7 @@
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>VS PS Test D</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
@@ -377,6 +380,7 @@
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>historyRetentionPolicy</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
@@ -450,7 +454,7 @@
     </recordTypes>
     <recordTypes>
         <fullName>Dinner_RT10</fullName>
-        <active>true</active>
+        <active>false</active>
         <label>Dinner RT10</label>
         <picklistValues>
             <picklist>Dinner_Type__c</picklist>
@@ -804,17 +808,6 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Dinner_Type__c</picklist>
-            <values>
-                <fullName>Full</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partial</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>Picklist_Dinner_Table__c</picklist>
             <values>
                 <fullName>Dinner Table1</fullName>
@@ -849,17 +842,6 @@
             </values>
             <values>
                 <fullName>High Touch%2FHigh Urgency</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partial</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Dinner_Type__c</picklist>
-            <values>
-                <fullName>Full</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -910,17 +892,6 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Dinner_Type__c</picklist>
-            <values>
-                <fullName>Full</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partial</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>Picklist_Dinner_Table__c</picklist>
             <values>
                 <fullName>Dinner Table1</fullName>
@@ -943,7 +914,7 @@
             </values>
         </picklistValues>
     </recordTypes>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

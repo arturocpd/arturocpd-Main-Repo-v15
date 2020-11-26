@@ -184,16 +184,22 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Case_Record_Page</content>
         <formFactor>Large</formFactor>
-        <type>Default</type>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Case_Record_Page</content>
         <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
     <businessProcesses>
@@ -289,20 +295,17 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>AssetWarrantyId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Back_Promote_Field__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Back Promote Field</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>BitCoin__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>BitCoin</label>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -1246,6 +1249,12 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
         <fullName>DeleteMe2__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -1279,7 +1288,7 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>Dependent 1</fullName>
+                    <fullName>New Dependent 1</fullName>
                     <default>false</default>
                     <label>Dependent 1</label>
                 </value>
@@ -1298,7 +1307,7 @@
                 <controllingFieldValue>Controlling 1</controllingFieldValue>
                 <controllingFieldValue>Controlling 2</controllingFieldValue>
                 <controllingFieldValue>Controlling 3</controllingFieldValue>
-                <valueName>Dependent 1</valueName>
+                <valueName>New Dependent 1</valueName>
             </valueSettings>
             <valueSettings>
                 <controllingFieldValue>Controlling 1</controllingFieldValue>
@@ -1688,7 +1697,7 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>Test 1</fullName>
+                    <fullName>New Test 1</fullName>
                     <default>false</default>
                     <label>Test 1</label>
                 </value>
@@ -1701,6 +1710,11 @@
                     <fullName>Test 3</fullName>
                     <default>false</default>
                     <label>Test 3</label>
+                </value>
+                <value>
+                    <fullName>Test2</fullName>
+                    <default>false</default>
+                    <label>Test2</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -2534,6 +2548,13 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ServiceContractId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>SlaExitDate</fullName>
@@ -5265,6 +5286,18 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Test_conflict__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Test conflict</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Training_field__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -5303,7 +5336,6 @@
     </fields>
     <fields>
         <fullName>Unique_Code__c</fullName>
-        <caseSensitive>true</caseSensitive>
         <encryptionScheme>None</encryptionScheme>
         <externalId>true</externalId>
         <label>Unique Code</label>
@@ -5313,7 +5345,7 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
-        <unique>true</unique>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Update_deployment_flow__c</fullName>
@@ -5456,6 +5488,16 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>Zip_file_test__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Zip file test</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>bug_test__c</fullName>
@@ -6197,15 +6239,15 @@
         <picklistValues>
             <picklist>Dependent__c</picklist>
             <values>
-                <fullName>Dependent 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Dependent 2</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Dependent 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Dependent 1</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -6227,7 +6269,7 @@
         <picklistValues>
             <picklist>Picklist_bug_test__c</picklist>
             <values>
-                <fullName>Test 1</fullName>
+                <fullName>New Test 1</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -8915,15 +8957,15 @@
         <picklistValues>
             <picklist>Dependent__c</picklist>
             <values>
-                <fullName>Dependent 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Dependent 2</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Dependent 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Dependent 1</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -8945,7 +8987,7 @@
         <picklistValues>
             <picklist>Picklist_bug_test__c</picklist>
             <values>
-                <fullName>Test 1</fullName>
+                <fullName>New Test 1</fullName>
                 <default>false</default>
             </values>
             <values>

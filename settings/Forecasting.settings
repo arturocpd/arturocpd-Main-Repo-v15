@@ -145,6 +145,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>CORE.USERS.ALIAS</field>
             <label>Opportunity Owner Alias</label>
         </opportunityListFieldsLabelMappings>
@@ -245,6 +249,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -301,6 +309,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
             <field>CORE.USERS.LAST_NAME</field>
@@ -326,6 +335,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -409,6 +419,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -509,6 +523,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -565,6 +583,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -590,6 +609,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -673,6 +693,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -777,6 +801,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -833,6 +861,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -859,6 +888,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -942,6 +972,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -1042,6 +1076,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -1098,6 +1136,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -1123,6 +1162,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -1206,6 +1246,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -1310,6 +1354,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -1366,6 +1414,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -1392,6 +1441,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -1475,6 +1525,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -1575,6 +1629,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -1631,6 +1689,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -1656,6 +1715,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -1739,6 +1799,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -1843,6 +1907,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -1899,6 +1967,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -1925,6 +1994,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -2008,6 +2078,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -2108,6 +2182,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -2164,6 +2242,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -2189,6 +2268,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -2272,6 +2352,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -2376,6 +2460,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -2432,6 +2520,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -2458,6 +2547,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -2541,6 +2631,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -2641,6 +2735,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -2697,6 +2795,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -2722,6 +2821,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -2805,6 +2905,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -2909,6 +3013,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -2965,6 +3073,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -2991,6 +3100,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -3074,6 +3184,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -3174,6 +3288,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -3230,6 +3348,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -3255,6 +3374,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -3342,6 +3462,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>CORE.USERS.ALIAS</field>
             <label>Opportunity Owner Alias</label>
         </opportunityListFieldsLabelMappings>
@@ -3442,6 +3566,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -3495,6 +3623,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
             <field>CORE.USERS.LAST_NAME</field>
@@ -3520,6 +3649,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -3607,6 +3737,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -3711,6 +3845,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -3764,6 +3902,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -3790,6 +3929,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -3877,6 +4017,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>CORE.USERS.ALIAS</field>
             <label>Opportunity Owner Alias</label>
         </opportunityListFieldsLabelMappings>
@@ -3977,6 +4121,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -4030,6 +4178,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
             <field>CORE.USERS.LAST_NAME</field>
@@ -4055,6 +4204,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -4142,6 +4292,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -4246,6 +4400,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -4299,6 +4457,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -4325,6 +4484,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -4412,6 +4572,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -4516,6 +4680,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -4569,6 +4737,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -4595,6 +4764,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -4682,6 +4852,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -4782,6 +4956,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -4835,6 +5013,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -4860,6 +5039,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -4947,6 +5127,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -5051,6 +5235,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -5104,6 +5292,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -5130,6 +5319,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -5217,6 +5407,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -5317,6 +5511,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -5370,6 +5568,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -5395,6 +5594,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -5482,6 +5682,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -5586,6 +5790,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -5639,6 +5847,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -5665,6 +5874,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -5752,6 +5962,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -5852,6 +6066,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -5905,6 +6123,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -5930,6 +6149,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -6017,6 +6237,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -6117,6 +6341,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -6170,6 +6398,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -6195,6 +6424,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -6282,6 +6512,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -6382,6 +6616,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -6435,6 +6673,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -6460,6 +6699,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -6547,6 +6787,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -6651,6 +6895,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -6704,6 +6952,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -6730,6 +6979,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -6817,6 +7067,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -6917,6 +7171,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -6970,6 +7228,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -6995,6 +7254,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -7082,6 +7342,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -7182,6 +7446,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -7235,6 +7503,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -7260,6 +7529,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>
@@ -7347,6 +7617,10 @@
             <label>Contract Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Opportunity Currency</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.AMOUNT</field>
             <label>Amount</label>
         </opportunityListFieldsLabelMappings>
@@ -7447,6 +7721,10 @@
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000TRU0V</field>
+            <label>OppText</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000IOumk</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
@@ -7500,6 +7778,7 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
             <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -7525,6 +7804,7 @@
             <field>00N0Y00000IOumh</field>
             <field>00N0Y00000IOumi</field>
             <field>00N0Y00000IOumj</field>
+            <field>00N1v00000TRU0V</field>
             <field>00N0Y00000IOumk</field>
             <field>00N1v00000TEpea</field>
             <field>00N0Y00000JpxAn</field>

@@ -10,6 +10,7 @@
   },
   "type" : "theme",
   "views" : [ {
+    "componentAttributes" : { },
     "componentName" : "salesforceIdentity:loginBody2",
     "id" : "a8bb12cb-5697-478d-aa3b-4a0823c3c0f6",
     "label" : "Login",
@@ -28,6 +29,12 @@
     } ],
     "type" : "view"
   }, {
+    "componentAttributes" : {
+      "IsDefaultHeaderHidden" : false,
+      "IsDefaultNotificationsHidden" : false,
+      "fixedPageWidth" : 1140,
+      "isPageWidthFixed" : true
+    },
     "componentName" : "siteforce:serviceBody",
     "id" : "7ea87b54-6371-41c0-ac56-d17046a68445",
     "label" : "Default",

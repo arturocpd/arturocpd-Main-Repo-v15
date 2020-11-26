@@ -38,6 +38,14 @@
             <translation><!-- Afghanistan 93 --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Café</masterLabel>
+            <translation><!-- Café --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Décor</masterLabel>
+            <translation><!-- Décor --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>New</masterLabel>
             <translation><!-- New --></translation>
         </picklistValues>
@@ -144,6 +152,30 @@
         <name>Install__c</name>
     </fields>
     <fields>
+        <label><!-- Ivan TEst --></label>
+        <name>Ivan_TEst__c</name>
+    </fields>
+    <fields>
+        <label><!-- Label --></label>
+        <name>Label__c</name>
+        <picklistValues>
+            <masterLabel>Four</masterLabel>
+            <translation><!-- Four --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>One</masterLabel>
+            <translation><!-- One --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Three</masterLabel>
+            <translation><!-- Three --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Two</masterLabel>
+            <translation><!-- Two --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Lets Override 3 --></label>
         <name>Lets_Override_3__c</name>
     </fields>
@@ -224,6 +256,10 @@
         <name>Test_Override_2__c</name>
     </fields>
     <fields>
+        <label><!-- Text Formula --></label>
+        <name>Text_Formula__c</name>
+    </fields>
+    <fields>
         <label><!-- Trim Level --></label>
         <name>Trim_Level__c</name>
         <picklistValues>
@@ -277,6 +313,10 @@
         <name>Auto_Resolve_RT</name>
     </recordTypes>
     <recordTypes>
+        <label><!-- Business Account --></label>
+        <name>Business_Account</name>
+    </recordTypes>
+    <recordTypes>
         <label><!-- DeleteRTacc --></label>
         <name>DeleteRTacc</name>
     </recordTypes>
@@ -285,6 +325,7 @@
         <name>RT_Nested_Test</name>
     </recordTypes>
     <recordTypes>
+        <description><!-- Description MOD --></description>
         <label><!-- Record Type1 --></label>
         <name>Record_Type1</name>
     </recordTypes>

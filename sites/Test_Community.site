@@ -21,7 +21,6 @@
     <masterLabel>Test Community</masterLabel>
     <referrerPolicyOriginWhenCrossOrigin>false</referrerPolicyOriginWhenCrossOrigin>
     <requireHttps>true</requireHttps>
-    <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
     <siteAdmin>ngarturodev1cpd@gmail.com</siteAdmin>
     <siteGuestRecordDefaultOwner>ngarturodev1cpd@gmail.com</siteGuestRecordDefaultOwner>

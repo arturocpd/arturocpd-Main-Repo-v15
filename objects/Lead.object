@@ -321,6 +321,11 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>CurrentGenerators__c</fullName>
         <encryptionScheme>None</encryptionScheme>
         <externalId>false</externalId>
@@ -602,6 +607,15 @@
             <value>closed</value>
         </filters>
         <label>All Open Leads</label>
+    </listViews>
+    <listViews>
+        <fullName>Leads_Queue_Lead</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Leads Queue</label>
+        <queue>Leads_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
     </listViews>
     <listViews>
         <fullName>MyUnreadLeads</fullName>

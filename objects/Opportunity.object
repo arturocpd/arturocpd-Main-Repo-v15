@@ -250,6 +250,11 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
         <fullName>CurrentGenerators__c</fullName>
         <encryptionScheme>None</encryptionScheme>
         <externalId>false</externalId>
@@ -342,6 +347,18 @@
         <encryptionScheme>None</encryptionScheme>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>OppText__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>OppText</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>OrderNumber__c</fullName>
@@ -682,10 +699,6 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Now</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Tomorrow</fullName>
                 <default>false</default>
             </values>
@@ -790,10 +803,6 @@
         <picklistValues>
             <picklist>Time_Picklist__c</picklist>
             <values>
-                <fullName>Now</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Tomorrow</fullName>
                 <default>false</default>
             </values>
@@ -839,7 +848,13 @@
         <searchResultsAdditionalFields>OPPORTUNITY.CLOSE_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>Read</sharingModel>
+    <validationRules>
+        <fullName>TestCharacters</fullName>
+        <active>false</active>
+        <errorConditionFormula>NOT(Description =  $Label.TestCharacter)</errorConditionFormula>
+        <errorMessage>Description is not equal to TestCharacter Custom Label</errorMessage>
+    </validationRules>
     <webLinks>
         <fullName>DeliveryStatus</fullName>
         <availability>online</availability>

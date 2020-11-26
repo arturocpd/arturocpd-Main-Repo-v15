@@ -13,9 +13,25 @@
     <tabs>standard-Contact</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-Task</tabs>
+    <tabs>ADD_Product__c</tabs>
+    <tabs>ADD_Conficguration_Rule__c</tabs>
+    <tabs>ADD_Product_Rule__c</tabs>
+    <tabs>ADD_Product_Action__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Sales_Console_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>ADD_Conficguration_Rule__c</tab>
+        </mappings>
+        <mappings>
+            <tab>ADD_Product_Action__c</tab>
+        </mappings>
+        <mappings>
+            <tab>ADD_Product_Rule__c</tab>
+        </mappings>
+        <mappings>
+            <tab>ADD_Product__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-Account</tab>
         </mappings>

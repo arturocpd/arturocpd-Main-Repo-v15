@@ -7,6 +7,7 @@
     </fieldOverrides>
     <fieldOverrides>
         <field>ToIds</field>
+        <formula>Case.ContactId</formula>
     </fieldOverrides>
     <label>Send an Email</label>
     <optionsCreateFeedItem>true</optionsCreateFeedItem>

@@ -3,7 +3,7 @@
     <connectionTimeoutDuration>50</connectionTimeoutDuration>
     <connectionWarningDuration>40</connectionWarningDuration>
     <displayQueuePosition>false</displayQueuePosition>
-    <enablePrechatApi>false</enablePrechatApi>
+    <enablePrechatApi>true</enablePrechatApi>
     <enableTranscriptSave>false</enableTranscriptSave>
     <label>Main Chat</label>
     <windowTitle>Main Chat</windowTitle>
