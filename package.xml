@@ -2,7 +2,16 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>AppleWatch</members>
+        <members>AppleWatchTest</members>
         <name>ApexClass</name>
     </types>
-    <version>48.0</version>
+    <types>
+        <members>Case.BitCoin__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Account-Account Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>50.0</version>
 </Package>
